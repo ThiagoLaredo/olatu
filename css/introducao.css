@@ -1,62 +1,179 @@
 .intro {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  gap: 100px;
+  background: url(../img/bg-programador.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 8rem 0 5rem 0;
+  overflow: hidden;
+}
+
+.intro_info {
+  padding-bottom: 4rem;
+}
+.intro_container {
+  position: relative;
+}
+
+.intro_info img {
+  margin: 40px auto;
+}
+
+.intro h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  max-width: 42.5rem;
+  margin: 0.9375rem auto;
+}
+
+.intro p {
+  text-align: center;
+  color: #c0c9df;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  max-width: 26.25rem;
+  margin: 0.9375rem auto;
+}
+
+.intro p::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: #fff;
+  margin: 0.9375rem auto;
+  border-radius: 6px;
+}
+
+.seta-animada {
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/seta-abaixo.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
+  left: 48.3%;
+  transform: translateX(-50%);
+  transform: translateY(210px);
+
+  animation-name: seta-animada;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes seta-animada {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+
+.intro_dados {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  letter-spacing: -0.01rem;
+  background-color: #2e2e38;
+  border-radius: 1.125rem;
+  color: #fff;
+  max-width: 30.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto -3.75rem auto;
+  position: relative;
+  top: -65px;
+  box-shadow: 0 4px 16px 4px rgb(0 0 0 / 30%);
+  padding: 20px;
+}
+
+.intro_dados-design {
+  margin-right: 10px;
+}
+
+.intro_dados.animate li::before {
+  width: 100%;
+}
+
+.intro_dados-design li {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.texto h1 {
-  color: #0b0c12;
-  font-size: 4rem;
-  line-height: 1.3;
-  margin-bottom: 20px;
+.intro_dados-performance {
+  margin-left: 10px;
 }
 
-.texto p {
-  color: #636973;
-  font-size: 1.3rem;
-  line-height: 1.3;
+.intro_dados-performance li {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.borda {
-  border-radius: 50%;
-  padding: 6px;
-  background-image: linear-gradient(#ffffff, #ffffff),
-    radial-gradient(circle at top left, #52bad1, #81ecf3);
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  background-clip: content-box, padding-box;
+.intro_dados li {
+  padding: 0.625rem 0;
+  position: relative;
 }
 
-.borda img {
-  width: auto;
-  height: auto;
-  border-radius: 50%;
-  border: 5px solid #ffffff;
-  box-sizing: border-box;
+.intro_dados-design li::before {
+  content: "";
+  display: block;
+  height: 2px;
+  transition: 0.3s;
+  position: absolute;
+  background: #212129;
+  top: 0;
+  left: 10px;
+  width: 100%;
 }
 
-@media (max-width: 1000px) {
-  .intro h1 {
-    font-size: 3rem;
-  }
+.intro_dados-performance li::before {
+  content: "";
+  display: block;
+  height: 2px;
+  transition: 0.3s;
+  position: absolute;
+  background: #212129;
+  top: 0;
+  left: -10px;
+  width: 100%;
+}
+
+.intro_dados li:first-child::before {
+  display: none;
+}
+
+.intro_dados-performance::before {
+  content: "";
+  display: block;
+  height: 80px;
+  transition: 0.3s;
+  width: 2px;
+  position: absolute;
+  background: #212129;
+  top: 0;
+  left: -10px;
+}
+
+.intro_dados-performance {
+  position: relative;
 }
 
 @media (max-width: 800px) {
   .intro {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    background: url(../img/bg-programador.jpg) no-repeat center -80px;
   }
 
   .intro h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
   }
 
-  .intro p {
-    font-size: 1rem;
+  .seta-animada {
+    left: 46%;
+    transform: translateY(250px);
   }
 }

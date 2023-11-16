@@ -1,19 +1,19 @@
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: #1f1f26;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Sintony", Arial, sans-serif;
+  font-family: "IBM+Plex+Sans", Arial, sans-serif;
   margin: 0;
 }
 
 p {
   margin: 0;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "IBM Plex Sans Condensed", Arial, sans-serif;
 }
 
 ul,
@@ -21,15 +21,15 @@ li {
   margin: 0px;
   padding: 0px;
   list-style: none;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "IBM Plex Sans Condensed", Arial, sans-serif;
 }
 
 span {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "IBM Plex Sans Condensed", Arial, sans-serif;
 }
 
 a {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "IBM+Plex+Sans", Arial, sans-serif;
   text-decoration: none;
 }
 
@@ -39,20 +39,30 @@ img {
   display: block;
 }
 
-.azul {
-  color: #52bad1;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.verde {
-  color: #81ecf3;
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+    opacity: 1;
+  }
 }
 
-.titulo {
-  color: #e6eaf0;
-  font-size: 8rem;
-  line-height: 1.2;
-  font-weight: bold;
-  word-break: break-all;
-  text-transform: uppercase;
-  max-width: 4ch;
+.js [data-anime="scroll"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: .3s;
+}
+
+.js [data-anime="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }

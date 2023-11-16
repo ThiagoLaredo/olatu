@@ -1,7 +1,10 @@
 @import "./global.css";
 @import "./header.css";
 @import "./introducao.css";
-@import "./experiencia.css";
-@import "./formacao.css";
+@import "./oque.css";
+@import "./como.css";
+@import "./depoimentos.css";
 @import "./contato.css";
 @import "./portifolio.css";
+@import "./projetos.css";
+@import "./menu-mobile.css";
