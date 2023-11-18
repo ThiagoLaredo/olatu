@@ -121,4 +121,8 @@
     max-width: none;
     margin-bottom: 30px;
   }
+
+  .btn-port {
+    padding: 5px !important;
+  }
 }
