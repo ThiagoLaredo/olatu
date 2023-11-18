@@ -50,6 +50,12 @@
 }
 
 @media (max-width: 800px) {
+
+  #contato {
+    background-color: #1954ec;
+    padding: 20px 0;
+  }
+
   .rodape-texto {
     grid-template-columns: 1fr;
     gap: 20px;
