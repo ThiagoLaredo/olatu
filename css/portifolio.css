@@ -90,11 +90,20 @@
 }
 
 @media (max-width: 800px) {
+  .portifolio {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
   .portifolio-lista {
     display: grid;
     grid-template-columns: 1fr;
     gap: 80px;
   }
+
+  .titulo-projetos {
+    margin-bottom: 5px;
+  }
+
   .projetos {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
