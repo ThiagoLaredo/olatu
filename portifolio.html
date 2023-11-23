@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div class="header_menu">
+  <div class="header_menu header-background">
     <a href="index.html"> <img src="./img/logo branco.svg"></a>
     <nav class="menu" data-menu="suave">
       <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
@@ -24,8 +24,8 @@
       </button>
       <ul data-menu="list" id="menu">
         <li><a href="portifolio.html">Projetos</a></li>
-        <li><a href="#oque">O que</a></li>
-        <li><a href="#como">Como</a></li>
+        <li><a href="/index.html#oque">O que</a></li>
+        <li><a href="/index.html#como">Como</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -35,13 +35,23 @@
   <main class="portifolio-container">
     <h2 class="titulo-portifolio">Projetos</h2>
     <div class="portifolio-lista">
-      <div class="portifolio js-scroll">
+      <div class="portifolio" data-anime="js-scroll"">
         <span class="ano">Site</span>
         <div>
           <h3 class="titulo-projetos">Glue</h3>
           <p class="texto-projetos">Gestão de carreira para talentos do audivisual em publicidade</p>
         </div>
         <img class="print" src="./img/glue.png">
+        <a href="https://gluehere.co/" target="_blank" class="btn small btn-port">Ver Site</a>
+      </div>
+
+      <div class="portifolio" data-anime="js-scroll">
+        <span class="ano">Site</span>
+        <div>
+          <h3 class="titulo-projetos">Grupo Papaki</h3>
+          <p class="texto-projetos">Maior grupo de produção publicitária do Brasil</p>
+        </div>
+        <img class="print" src="./img/papaki.jpg">
         <a href="https://gluehere.co/" target="_blank" class="btn small btn-port">Ver Site</a>
       </div>
 
@@ -166,16 +176,7 @@
         <a href="https://omwtravel.com.br/" target="_blank" class="btn small btn-port">Ver Site</a>
       </div>
 
-      <div class="portifolio" data-anime="scroll">
-        <span class="ano">Site</span>
-        <div>
-          <h3 class="titulo-projetos">Boa Village</h3>
-          <p class="texto-projetos">Bungalows para hospedagem na Praia de Algodões</p>
-        </div>
-        <img class="print" src="./img/boa.webp">
-        <a href="https://boavillage.com.br/" target="_blank" class="btn small btn-port">Ver Site</a>
-      </div>
-    </div>
+     
   </main>
 
   <footer id="contato">
