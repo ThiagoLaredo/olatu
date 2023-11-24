@@ -7,14 +7,14 @@
     display: flex;
     background: #222;
     border: none;
-    padding: 1rem 1rem;
-    border-radius: 4px;
+    padding: 0.8rem 0.8rem;
+    border-radius: 8px;
     text-transform: uppercase;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
-    margin: 10px;
+    margin: 4px 0;
     align-items: center;
     position: relative;
     z-index: 300;
@@ -58,9 +58,9 @@
     right: 0px;
     text-align: center;
     z-index: 1;
-    height: 400px;
-    background-color: #1954ec;
-    padding-top: 100px
+    height: 100vh;
+    background-color: #4949BF;
+    padding-top: 120px
   }
 
   .js [data-menu="list"] a {
