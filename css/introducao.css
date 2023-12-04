@@ -1,62 +1,43 @@
 .intro {
-  background-color: #15151A;
-  background: url(../img/piramidesazul8.svg) no-repeat center center #15151A;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 12rem 0;
+  position: relative;
+  background: linear-gradient(180deg, #2C2CF2, #51518C);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+
+.intro::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/meditation.png) no-repeat center 120px;
+  background-size: contain;
+  background-blend-mode:lighten;
+  background-color: #2C2CF2;
   overflow: hidden;
+  opacity: 0.4;
 }
 
-.intro_info {
-  padding-bottom: 4rem;
-}
 .intro_container {
   position: relative;
-}
-
-.intro_info img {
-  margin: 40px auto;
-}
-
-/* .intro h1::before {
-  content: "";
-  background: #15151A;
-  width: 600px;
-  height: 300px;
-  border-radius: 40%;
-  -webkit-filter: blur(30px);
-  -webkit-transform: scale(1.3, 0.8);
-  position: absolute;
-  top: -80px;
-  right: 60px;
-  transition: 2s;
-  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1.2);
-  z-index: -1;
-} */
-
+} 
 
 .intro h1 {
   text-align: center;
   color: #fff;
-  font-size: 3rem;
+  font-size: 3.2rem;
   max-width: 62.5rem;
-  margin: 0.9375rem auto;
+  margin: 1.9375rem auto;
   position: relative;
   z-index: 3;
 }
-
-.intro p {
-  text-align: center;
-  color: #DBDDFF;
-  font-size: 1.125rem;
-  line-height: 1.55;
-  max-width: 26.25rem;
-  margin: 0.9375rem auto;
-  z-index: 4;
-  position: relative;
-}
-
-.intro p::before {
+/* 
+intro h1::after {
   content: "";
   display: block;
   width: 32px;
@@ -64,8 +45,19 @@
   background: #fff;
   margin: 0.9375rem auto;
   border-radius: 6px;
-}
+} */
 
+.intro p {
+  text-align: center;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  /* max-width: 34.25rem; */
+  margin: 6.6rem auto 1.6rem auto ;
+  z-index: 4;
+  position: relative;
+}
+/* 
 .seta-animada {
   width: 30px;
   height: 30px;
@@ -74,6 +66,7 @@
   position: absolute;
   background-size: contain;
   left: 48.3%;
+  bottom: 0;
   transform: translateX(-50%);
   transform: translateY(210px);
   animation-name: seta-animada;
@@ -81,119 +74,23 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   z-index: 99;
-}
+  display: block;
+} */
 
-@keyframes seta-animada {
+/* @keyframes seta-animada {
   0% {
     top: 0px;
   }
   100% {
     top: 20px;
   }
-}
+} */
 
-.intro_dados {
-  font-size: 0.875rem;
-  line-height: 1.55;
-  letter-spacing: -0.01rem;
-  background-color: #2e2e38;
-  border-radius: 1.125rem;
-  color: #fff;
-  max-width: 30.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto -3.75rem auto;
-  position: relative;
-  top: -65px;
-  box-shadow: 0 4px 16px 4px rgb(0 0 0 / 30%);
-  padding: 20px;
-}
 
-.intro_dados-design {
-  margin-right: 10px;
-}
-
-.intro_dados.animate li::before {
-  width: 100%;
-}
-
-.intro_dados-design li {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.intro_dados-performance {
-  margin-left: 10px;
-}
-
-.intro_dados-performance li {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.intro_dados li {
-  padding: 0.625rem 0;
-  position: relative;
-}
-
-.intro_dados-design li::before {
-  content: "";
-  display: block;
-  height: 2px;
-  transition: 0.3s;
-  position: absolute;
-  background: #212129;
-  top: 0;
-  left: 10px;
-  width: 100%;
-}
-
-.intro_dados-performance li::before {
-  content: "";
-  display: block;
-  height: 2px;
-  transition: 0.3s;
-  position: absolute;
-  background: #212129;
-  top: 0;
-  left: -10px;
-  width: 100%;
-}
-
-.intro_dados li:first-child::before {
-  display: none;
-}
-
-.intro_dados-performance::before {
-  content: "";
-  display: block;
-  height: 80px;
-  transition: 0.3s;
-  width: 2px;
-  position: absolute;
-  background: #212129;
-  top: 0;
-  left: -10px;
-}
-
-.intro_dados-performance {
-  position: relative;
-}
 
 @media (max-width: 800px) {
-  .intro {
-    background: url(../img/piramidesazul8.svg) no-repeat 66% -190px #15151A;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 6rem 0;
-    overflow: hidden;  }
 
-  .intro h1 {
+ .intro h1 {
     font-size: 2.2rem;
     max-width: none;
   }
@@ -210,7 +107,7 @@
 
 @media (min-width: 1200px) and (orientation: landscape) {
   .intro {
-    background: url(../img/piramidesazul8.svg) no-repeat bottom center #15151A;
+    background: url(../img/yoga.jpg) no-repeat bottom center #15151A opacity 0.5;
     background-size: cover;
 
 }
