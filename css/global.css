@@ -1,35 +1,22 @@
-body {
+body, h1, h2, h3, h4, p, ul, li, a {
   margin: 0;
-  background-color: #1F1F26;
+  padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
+body {
   font-family: "IBM+Plex+Sans", Arial, sans-serif;
-  margin: 0;
+  background-color: #fff;
 }
 
 p {
-  margin: 0;
   font-family: "IBM Plex Sans Condensed", Arial, sans-serif;
 }
 
-ul,
-li {
-  margin: 0px;
-  padding: 0px;
+ul {
   list-style: none;
-  font-family: "IBM Plex Sans Condensed", Arial, sans-serif;
-}
-
-span {
-  font-family: "IBM Plex Sans Condensed", Arial, sans-serif;
 }
 
 a {
-  font-family: "IBM+Plex+Sans", Arial, sans-serif;
   text-decoration: none;
 }
 
@@ -37,6 +24,10 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .container {

@@ -1,5 +1,5 @@
 #depoimentos {
-  background-color: #2e2e38;
+  background-color: #D1D1FF;
   padding: 4rem 0;
 }
 
@@ -9,14 +9,14 @@
 
 .intro_depoimentos h1 {
   text-align: center;
-  color: #fff;
+  color: #0F0F54;
   font-size: 2.25rem;
   line-height: 1.2;
 }
 
 .intro_depoimentos p {
   text-align: center;
-  color: #c0c9df;
+  color: #0F0F54;
   font-size: 0.875rem;
   line-height: 1.55;
   max-width: 26.25rem;
@@ -50,14 +50,14 @@
   box-shadow: 0 0 0 6px #1f1f26;
 }
 .autor-depoimento {
-  color: #fff;
+  color: #0F0F54;
   font-size: 1rem;
   font-family: "IBM+Plex+Sans", Arial, sans-serif;
   align-items: center;
 }
 
 .texto-depoimento {
-  color: #c0c9df;
+  color: #0F0F54;
   font-size: 1rem;
 }
 

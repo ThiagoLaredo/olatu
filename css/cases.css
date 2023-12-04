@@ -1,0 +1,61 @@
+#cases {
+  background-color: #0F0F54;
+  padding: 3.75rem 0;
+}
+
+#cases h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 80px;
+}
+
+.case {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+.case-2 {
+flex-direction: row-reverse;
+}
+
+.case-brigitte img {
+  margin-left: 120px ;
+}
+
+.mockup {
+  flex: 1 1 260px;
+  position: relative;
+}
+
+.mockup img {
+  object-fit: contain;
+}
+
+.case-bio {
+  flex: 1 1 260px;
+}
+
+.case-bio h2 {
+  font-size: 2rem;
+  line-height: 1rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.case-bio span {
+  font-size: 1rem;
+  display: block;
+  line-height: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.case-bio p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fff;
+}
