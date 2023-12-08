@@ -1,7 +1,8 @@
 #cases {
   background-color: #0F0F54;
-  padding: 60px calc((100% - 1200px)/2);
+  padding: 60px calc((100% - 1280px)/2);
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
 }
 
@@ -17,7 +18,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 60px;
+  margin-bottom: 60px;
+
 }
 
 .case-2 {
@@ -118,8 +120,12 @@ flex-direction: row-reverse;
 @media (max-width: 800px) {
   #cases {
     background-color: #0F0F54;
-    padding: 60px calc((100% - 300px)/2);
-    display: flex;
-    flex-direction: column;
+    padding: 60px calc((100% - 340px)/2);
+    flex-wrap: nowrap;
   }
+  .case {
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
 }
