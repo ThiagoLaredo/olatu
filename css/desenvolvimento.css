@@ -3,7 +3,7 @@
   padding: 4rem;
 }
 
-#desenvolvimento h1 {
+#desenvolvimento h2 {
   display: flex;
   margin-bottom: 20px;
   font-size: 2rem;
@@ -43,7 +43,7 @@
   margin-bottom: 1rem;
 }
 
-.pilares h2 {
+.pilares h3 {
   font-size: 1.25rem;
   line-height: 1.25rem;
 }

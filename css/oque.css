@@ -1,20 +1,26 @@
-.intro_oque {
-  margin: 60px auto 0px auto;
+#oque {
+  background-color: #D1D1FF;
+  padding: 60px calc((100% - 1280px)/2);
+  display: flex;
+  flex-direction: column;
 }
-.intro_oque h1 {
+
+#oque h2 {
   text-align: center;
   color: #000;
   font-size: 2.25rem;
   line-height: 1.2;
-  margin: 1.875rem auto;
+  margin-bottom: 40px;
 }
-.oque_serviços {
+
+.serviços {
   display: flex;
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto 60px auto;
+  flex-wrap: nowrap;
   align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
 }
+
 .serviço {
   flex: 1;
   max-width: 21.25rem;
@@ -65,4 +71,11 @@
   background: rgba(255, 255, 255, 0.05);
   margin-top: 0.625rem;
   position: relative;
+}
+
+@media (max-width: 800px) {
+  .serviços {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }

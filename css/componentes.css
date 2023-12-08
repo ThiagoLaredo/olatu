@@ -1,4 +1,4 @@
-.btn-intro {
+.btn-vazado{
   padding: 12px 6px;
   color: #fff;
   text-decoration: none;
@@ -18,7 +18,7 @@
   transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
 }
 
-.btn-intro:hover {
+.btn-vazado:hover {
   background-color: #5AF22C;
   border: 2px solid #5AF22C;
   color: #2A2A33;
