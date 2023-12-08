@@ -1,6 +1,6 @@
 
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Desenvolvimento de site', 'E-commerce', 'Design'], 'text',['#5AF22C','#5AF22C','#5AF22C']);
+consoleText(['Site', 'E-commerce', 'Design'], 'text-effect',['#5AF22C','#5AF22C','#5AF22C']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
@@ -45,7 +45,6 @@ function consoleText(words, id, colors) {
 
     } else {
       con.className = 'console-underscore'
-
       visible = true;
     }
   }, 400)

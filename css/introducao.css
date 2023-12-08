@@ -36,16 +36,6 @@
   position: relative;
   z-index: 3;
 }
-/* 
-intro h1::after {
-  content: "";
-  display: block;
-  width: 32px;
-  height: 3px;
-  background: #fff;
-  margin: 0.9375rem auto;
-  border-radius: 6px;
-} */
 
 .intro p {
   text-align: center;
@@ -86,29 +76,32 @@ intro h1::after {
   }
 } */
 
-
-
 @media (max-width: 800px) {
 
  .intro h1 {
     font-size: 2.2rem;
     max-width: none;
   }
-
   .intro p {
     margin: 2rem 0;
   }
-
   .seta-animada {
     left: 46%;
     transform: translateY(250px);
   }
 }
 
-@media (min-width: 1200px) and (orientation: landscape) {
+@media (max-width: 800px) {
   .intro {
-    background: url(../img/yoga.jpg) no-repeat bottom center #15151A opacity 0.5;
-    background-size: cover;
-
-}
+    min-height: 68vh;
+  }
+  .intro h1 {
+    margin: 1.8rem auto;
+  }
+  .intro p {
+    margin: 5rem auto 1.6rem auto ;
+  }
+  #text-effect {
+    font-size: 1.8rem;
+  }
 }
