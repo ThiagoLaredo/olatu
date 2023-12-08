@@ -5,12 +5,12 @@
   flex-direction: column;
 }
 
-#cases h1 {
+#cases h2 {
   text-align: center;
   color: #fff;
   font-size: 2.25rem;
   line-height: 1.2;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .case {
@@ -41,7 +41,7 @@ flex-direction: row-reverse;
   flex: 1 1 260px;
 }
 
-.case-bio h2 {
+.case-bio h3 {
   font-size: 2rem;
   line-height: 1rem;
   color: #fff;

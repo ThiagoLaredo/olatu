@@ -59,6 +59,7 @@
   width: 100vw;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .loop--slider::before, .loop--slider::after {
   background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
