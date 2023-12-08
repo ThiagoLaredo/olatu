@@ -1,6 +1,8 @@
 #cases {
   background-color: #0F0F54;
-  padding: 3.75rem 0;
+  padding: 60px calc((100% - 1200px)/2);
+  display: flex;
+  flex-direction: column;
 }
 
 #cases h1 {
@@ -58,4 +60,66 @@ flex-direction: row-reverse;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #fff;
+}
+
+.btn-cases {
+  color: #ffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 10px 16px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  align-self: center
+;}
+
+.btn-cases::before {
+  box-sizing: border-box;
+  transform: translateX(100%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 99.5%;
+  height: 2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+}
+.btn-cases::after {
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99.5%;
+  height: 2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-cases:hover::before {
+  transition: .1s transform linear, .1s height linear .1s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #fff;
+}
+
+.btn-cases:hover::after {
+  transition: .1s transform linear, .1s height linear .1s;
+  transform: translateX(0);
+  height: 100%;
+  border-color: #fff;
+}
+
+@media (max-width: 800px) {
+  #cases {
+    background-color: #0F0F54;
+    padding: 60px calc((100% - 300px)/2);
+    display: flex;
+    flex-direction: column;
+  }
 }
