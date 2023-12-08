@@ -93,7 +93,7 @@
 
 @media (max-width: 800px) {
   .intro {
-    min-height: 68vh;
+    min-height: 80vh;
   }
   .intro h1 {
     margin: 1.8rem auto;
