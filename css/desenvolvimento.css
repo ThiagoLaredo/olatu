@@ -63,7 +63,7 @@
     justify-content: center; 
     flex-wrap: wrap;
   }
-  .desenvolvimento-titulo h2,p {
+  .desenvolvimento-titulo p {
     text-align: center;
   }
 }
