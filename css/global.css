@@ -6,8 +6,6 @@ body, h1, h2, h3, h4, p, ul, li, a {
 body {
   font-family: "IBM+Plex+Sans", Arial, sans-serif;
   background-color: #fff;
-  /* max-width: 100%; 
-  overflow-x: hidden;  */
 }
 
 p {
