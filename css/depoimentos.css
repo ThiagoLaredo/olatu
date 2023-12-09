@@ -3,33 +3,18 @@
   padding: 4rem 0;
 }
 
-.intro_depoimentos {
-  margin-bottom: 60px;
-}
-
-.intro_depoimentos h2 {
+#depoimentos h2 {
   text-align: center;
   color: #0F0F54;
   font-size: 2.25rem;
   line-height: 1.2;
-}
-
-.intro_depoimentos p {
-  text-align: center;
-  color: #0F0F54;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  max-width: 26.25rem;
-  margin: 0.5rem auto;
+  margin-bottom: 60px;
 }
 
 .depoimentos-todos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px 120px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .depoimento {
