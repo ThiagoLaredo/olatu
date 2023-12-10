@@ -1,6 +1,6 @@
 #cases {
   background-color: #0F0F54;
-  padding: 60px calc((100% - 1280px)/2);
+  padding: 60px calc((100% - 1080px)/2);
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -62,6 +62,7 @@ flex-direction: row-reverse;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #fff;
+  max-width: 48ch;
 }
 
 .btn-cases {
@@ -128,4 +129,10 @@ flex-direction: row-reverse;
     margin-bottom: 60px;
   }
 
+  .case-bio p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #fff;
+    max-width: none;
+  }
 }

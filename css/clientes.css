@@ -52,7 +52,6 @@
 
 .loop--slider {
   background: white;
-  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
   height: 100px;
   margin: auto;
   position: relative;
@@ -102,4 +101,60 @@
 .loop--slider .loop--slide {
   height: 80px;
   width: 200px;
+}
+
+@media (max-width: 800px) {
+  
+  #clientes {
+    gap: 16px;
+    overflow-x: hidden;
+  }
+  .loop--slider::before, .loop--slider::after {
+    display: none;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(calc(400px * 1));
+            transform: translateX(calc(400px * 1));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(calc(400px * 1));
+            transform: translateX(calc(400px * 1));
+  }
+}
+
+@-webkit-keyframes scroll-d {
+  0% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(calc(400px * 1));
+            transform: translateX(calc(400px * 1));
+  }
+}
+
+@keyframes scroll-d {
+  0% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(calc(400px * 1));
+            transform: translateX(calc(400px * 1));
+  }
+}
+
 }
