@@ -76,6 +76,6 @@
 @media (max-width: 800px) {
   .serviços {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 12px;
   }
 }
