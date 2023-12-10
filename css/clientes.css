@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: center;
 }
-.loop--slider::before, .loop--slider::after {
+/* .loop--slider::before, .loop--slider::after {
   background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
@@ -78,7 +78,7 @@
 .loop--slider::before {
   left: 0;
   top: 0;
-}
+} */
 .loop--slider .loop--slide--track {
   -webkit-animation: scroll 20s linear infinite;
           animation: scroll 20s linear infinite;
