@@ -2,8 +2,12 @@
   font: 300 0.75rem/1.35 "Inter", sans-serif;
 }
 
-.font-s {
+.font-s, .font-s-b {
   font: 300 1rem/1.5 "Inter", sans-serif;
+}
+
+.font-s-b {
+  font-weight: 500;
 }
 
 .font-m {

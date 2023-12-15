@@ -1,11 +1,26 @@
 .intro {
   position: relative;
-  background: linear-gradient(180deg, #2C2CF2, #6829E6);
+  background: linear-gradient(-45deg, #2C2CF2, #6829E6);
   min-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  }
+  /* background-size: 400% 400%;
+  animation: gradient 15s ease infinite; */
+}
+/* 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+
 
 .intro::before {
   content: ' ';
@@ -17,7 +32,7 @@
   height: 100%;
   background: url(../img/meditation.png) no-repeat center 120px;
   background-size: contain;
-  background-blend-mode:lighten;
+  background-blend-mode: lighten;
   background-color: #2C2CF2;
   overflow: hidden;
   opacity: 0.4;

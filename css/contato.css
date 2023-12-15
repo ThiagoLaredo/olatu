@@ -1,5 +1,5 @@
 #contato {
-  background-color: #2C2CF2;
+  background-color: var(--primary);
   padding: 80px 0;
 }
 
