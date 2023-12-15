@@ -1,11 +1,10 @@
 #depoimentos {
-  background-color: #D1D1FF;
+  background-color: var(--secondary5);
   padding: 4rem 0;
 }
 
 #depoimentos h2 {
   text-align: center;
-  color: #0F0F54;
   margin-bottom: 60px;
 }
 
@@ -36,10 +35,6 @@
 .autor-depoimento {
   color: #0F0F54;
   align-items: center;
-}
-
-.texto-depoimento {
-  color: #0F0F54;
 }
 
 .texto-depoimento {

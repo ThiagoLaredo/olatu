@@ -3,7 +3,7 @@
   color: #fff;
   text-decoration: none;
   display: block;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   border: 2px solid #fff;
   text-align: center;
   margin: 1.25rem auto 0 auto;
@@ -18,9 +18,29 @@
 }
 
 .btn-vazado:hover {
-  background-color: #5AF22C;
-  border: 2px solid #5AF22C;
+  background-color: #64d97b;
+  border: 2px solid #64d97b;
   color: #2A2A33;
+}
+
+.btn-color {
+  padding: 12px 8px;
+  color: #fff;
+  background-color: var(--primary);
+  text-decoration: none;
+  display: block;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary);
+  text-align: center;
+  margin: 1.25rem auto 0 auto;
+  max-width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
 }
 
 .btn::after {
