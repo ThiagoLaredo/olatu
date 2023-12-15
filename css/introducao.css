@@ -1,6 +1,6 @@
 .intro {
   position: relative;
-  background: linear-gradient(180deg, #2C2CF2, #51518C);
+  background: linear-gradient(180deg, #2C2CF2, #6829E6);
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -29,7 +29,6 @@
 
 .intro h1 {
   text-align: center;
-  color: #fff;
   font-size: 3.2rem;
   max-width: 62.5rem;
   margin: 1.9375rem auto;
@@ -39,10 +38,6 @@
 
 .intro p {
   text-align: center;
-  color: #fff;
-  font-size: 1.25rem;
-  line-height: 1.55;
-  /* max-width: 34.25rem; */
   margin: 6.6rem auto 1.6rem auto ;
   z-index: 4;
   position: relative;

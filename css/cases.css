@@ -1,14 +1,14 @@
 #cases {
-  background-color: #0F0F54;
+  background-color: var(--secondary);
   padding: 60px calc((100% - 1080px)/2);
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  gap: 24px;
 }
 
 #cases h2 {
   text-align: center;
-  color: #fff;
   margin-bottom: 60px;
 }
 
@@ -16,12 +16,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 60px;
-
+  padding: 20px 40px;
+  border-radius: 1rem;
+  flex: 1 1 600px;
+  gap: 20px;
 }
 
 .case-2 {
 flex-direction: row-reverse;
+flex: 1 1 600px;
 }
 
 .case-brigitte img {
@@ -41,18 +44,12 @@ flex-direction: row-reverse;
   flex: 1 1 260px;
 }
 
-.case-bio h3 {
-  color: #fff;
-}
-
 .case-bio span {
   display: block;
-  color: #fff;
   margin-bottom: 1.25rem;
 }
 
 .case-bio p {
-  color: #fff;
   max-width: 48ch;
 }
 
