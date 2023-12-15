@@ -20,8 +20,8 @@
   flex: 1 1 260px;
   border-radius: 16px;
   padding: 1.875rem;
-  box-shadow: 4px 4px 4px 4px  var(--primary5);
-  background-color: var(--secondary5);
+  background-color: var(--secondary10);
+  box-shadow: 0 4px 3px 0 var(--secondary5);
   position: relative;
   z-index: 2;
 }
@@ -31,6 +31,11 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 1rem;
+}
+
+.pilar-titulo img {
+ width: 36px;
+ height: 36px;
 }
 
 @media (max-width: 800px) {

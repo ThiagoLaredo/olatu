@@ -39,20 +39,17 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: 0.3s;
+  transition: 0.5s;
   transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
 }
 
-.btn::after {
+.btn-color:hover::after {
   content: "";
   display: inline-block;
   width: 8px;
   height: 8px;
   background: url(../img/seta-botao.svg) center center no-repeat;
-}
-
-.btn:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 .css-fjfek2 {

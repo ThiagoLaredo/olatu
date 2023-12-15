@@ -39,12 +39,12 @@
 
 .serviço li::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background-color: #6829E6;
   border-radius: 50%;
   display: inline-block;
-  border: 2px solid #0e1013;
+  /* border: 1px solid #0e1013; */
   position: relative;
   top: -1px;
   margin-right: 0.625rem;
