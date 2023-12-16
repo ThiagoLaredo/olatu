@@ -9,16 +9,21 @@
 }
 
 .depoimentos-todos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px 120px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
 }
 
 .depoimento {
+  flex: 1;
   display: grid;
   grid-template-columns: 100px 1fr;
   align-items: center;
   gap: 10px 20px;
+  padding: 40px; 
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 3px 0 var(--secondary5);
 }
 
 .depoimento img {

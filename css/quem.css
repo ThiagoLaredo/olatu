@@ -28,10 +28,10 @@
   text-align: left;
 }
 
-#perfil {
+/* #perfil {
   width: 100%;
   background-blend-mode: soft-light;
-}
+} */
 
 @media (max-width: 800px) {
   #quem {
