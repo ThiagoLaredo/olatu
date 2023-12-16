@@ -10,6 +10,23 @@
   margin-bottom: 8px;
 }
 
+#desenvolvimento p {
+  position: relative;
+}
+
+/* #desenvolvimento p::after {
+  content: "";
+  height: 50%;
+  width: 100%;
+  display: block;
+  z-index: -5;
+  opacity: 30%;
+  position: absolute;
+  transition: all .3s ease;
+  background: linear-gradient(180deg,transparent 50%,var(--accent) 50%);
+} */
+
+
 .pilares {
   display: flex;
   flex-wrap: wrap;
