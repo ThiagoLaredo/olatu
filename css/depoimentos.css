@@ -16,14 +16,18 @@
 
 .depoimento {
   flex: 1;
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  align-items: center;
-  gap: 10px 20px;
-  padding: 40px; 
   background-color: #fff;
+  padding: 40px;
   border-radius: 1rem;
   box-shadow: 0 4px 3px 0 var(--secondary5);
+}
+
+.avatar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .depoimento img {
@@ -37,17 +41,11 @@
   box-shadow: 0 0 0 4px #1f1f26;
 }
 
-.autor-depoimento {
-  align-items: center;
-}
-
-.texto-depoimento {
-  grid-column: -1 / 1;
-}
 
 @media (max-width: 800px) {
   .depoimentos-todos {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
