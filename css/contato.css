@@ -9,7 +9,7 @@
 }
 
 .rodape-texto {
-  padding: 40px 0;
+  padding:  0 0 40px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -17,21 +17,21 @@
 }
 
 .rodape-texto p {
-  color: #fff;
+  color: var(--bg);
   max-width: 30ch;
 }
 
 .rodape-texto li {
-  color: #fff;
+  color: var(--bg);
   margin-bottom: 0.5rem;
 }
 
 .rodape-texto a {
-  color: #f5f7fa;
+  color: var(--bg);
 }
 
 .rodape-texto a:hover {
-  color: #9C9CFF;
+  color: var(--textcontrast);
 }
 
 .copy {

@@ -1,6 +1,5 @@
 #desenvolvimento {
-  /* background-color: var( --secondary5); */
-  padding: 60px calc((100% - 1280px)/2);
+  padding: 80px calc((100% - 1280px)/2);
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   gap: 40px;
@@ -37,8 +36,8 @@
   flex: 1 1 260px;
   border-radius: 16px;
   padding: 1.875rem;
-  background-color: var(--secondary10);
-  box-shadow: 0 4px 3px 0 var(--secondary5);
+  background-color: var(--primary10);
+  box-shadow: 0 4px 3px 0 var(--primary5);
   position: relative;
   z-index: 2;
 }

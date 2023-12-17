@@ -25,6 +25,7 @@
   --text85: hsl(240, 10%, 18%, 85%);
   --text90: hsl(240, 10%, 18%, 90%);
   --text95: hsl(240, 10%, 18%, 95%);
+  --bg5:hsl(0, 0, 0, 5%);
   --primary5: hsl(240, 88%, 56%, 5%);
   --primary10: hsl(240, 88%, 56%, 10%);
   --primary15: hsl(240, 88%, 56%, 15%);
@@ -195,6 +196,11 @@
 
 .text95 {
   color: var(--text95);
+}
+
+/* Bg Shades */
+.bg5 {
+  color: var(--bg5);
 }
 
 /* Primary Shades */

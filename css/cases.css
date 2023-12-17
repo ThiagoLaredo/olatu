@@ -1,10 +1,9 @@
 #cases {
   background-color: var(--secondary);
-  padding: 60px calc((100% - 1080px)/2);
+  padding: 80px calc((100% - 1080px)/2);
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  gap: 24px;
 }
 
 #cases h2 {
@@ -16,10 +15,10 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 0;
   border-radius: 1rem;
   flex: 1 1 600px;
-  gap: 20px;
+  gap: 40px;
 }
 
 .case-2 {
@@ -53,57 +52,8 @@ flex: 1 1 600px;
   max-width: 48ch;
 }
 
-.btn-cases {
-  color: #ffff;
-  font-size: 1.2rem;
-  text-decoration: none;
-  padding: 10px 16px;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  margin-top: 20px;
-  align-self: center
-;}
-
-.btn-cases::before {
-  box-sizing: border-box;
-  transform: translateX(100%);
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 99.5%;
-  height: 2px;
-  border-bottom: 2px solid transparent;
-  border-left: 2px solid transparent;
-  border-radius: 4px;
-}
-.btn-cases::after {
-  box-sizing: border-box;
-  transform: translateX(-100%);
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 99.5%;
-  height: 2px;
-  border-top: 2px solid transparent;
-  border-right: 2px solid transparent;
-  border-radius: 4px;
-}
-
-.btn-cases:hover::before {
-  transition: .1s transform linear, .1s height linear .1s;
-  transform: translateX(0);
-  height: 100%;
-  border-color: #fff;
-}
-
-.btn-cases:hover::after {
-  transition: .1s transform linear, .1s height linear .1s;
-  transform: translateX(0);
-  height: 100%;
-  border-color: #fff;
+#btn-cases {
+  align-self: center;
 }
 
 @media (max-width: 800px) {
