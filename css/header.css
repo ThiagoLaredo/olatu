@@ -15,7 +15,7 @@
 
 .menu ul {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   }
 
@@ -70,8 +70,7 @@
   opacity: 1;
   border-top: 0.125rem solid var(--bg);
   border-right: 0.125rem solid var(--bg);
-  transition: width 200ms cubic-bezier(0.07, 0.62, 0.61, 1), height 100ms 200ms cubic-bezier(0.07, 0.62, 0.61, 1);
-  
+  transition: width 100ms 200ms cubic-bezier(0.07, 0.62, 0.61, 1), height 100ms 200ms cubic-bezier(0.07, 0.62, 0.61, 1);
 }
   
   
@@ -81,6 +80,14 @@
   opacity: 1;
   border-bottom: 0.125rem solid var(--bg);
   border-left : 0.125rem solid var(--bg);
-  transition: width 200ms cubic-bezier(0.07, 0.62, 0.61, 1), height 100ms 200ms cubic-bezier(0.07, 0.62, 0.61, 1);
+  transition: width 00ms 200ms cubic-bezier(0.07, 0.62, 0.61, 1), height 100ms 200ms cubic-bezier(0.07, 0.62, 0.61, 1);
 }
 
+@media (max-width: 700px) {
+  .menu a:hover::before {
+    display: none;
+  }
+  .menu a:hover::after {
+    display: none;
+  }
+}
