@@ -1,5 +1,5 @@
 .header-background {
-  background-color: #19191f;
+  background-color: var(--secondary);
 }
 
 .portifolio-container {
@@ -9,7 +9,8 @@
 }
 
 .titulo-portifolio {
-  color: #5C5C70;
+  color: var(--text60);
+  font: 500 1.5rem/1.5 "Inter", sans-serif;
   font-size: 2.5rem;
   margin-bottom: 80px;
 }
@@ -24,9 +25,9 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10px 20px;
-  background-color: #19191f;
+  background-color: var(--primary10);
   padding: 20px 20px 12px 20px;
-  border-radius: 8px;
+  border-radius: 1rem;
   position: relative;
   margin-bottom: 20px;
 }
@@ -34,13 +35,13 @@
 .portifolio::before {
   content: "";
   position: absolute;
-  background: linear-gradient(#0c92f6, #2C2CF2);
+  background: linear-gradient(var(--accent), var(--primary));
   display: block;
   height: 4px;
   width: 20px;
   background-repeat: no-repeat;
-  top: -5px;
-  left: 5px;
+  top: -2px;
+  left: 20px;
 }
 
 .portifolio img {
@@ -49,23 +50,22 @@
 
 .ano {
   position: absolute;
-  top: -30px;
-  left: 2px;
-  font-size: 0.75rem;
+  top: -24px;
+  left: 20px;
+  font: 300 0.75rem/1.35 "Inter", sans-serif;
   letter-spacing: 0.06rem;
-  color: #c0c9df;
+  color: var(--text);
 }
 
 .titulo-projetos {
-  color: #fff;
-  font-size: 1.35rem;
+  color: var(--text);
+  font: 500 1.125rem/1.35 "Inter", sans-serif;
   margin-bottom: 10px;
 }
 
 .texto-projetos {
-  color: #c0c9df;
-  font-size: 1rem;
-  line-height: 20px;
+  color: var(--text);
+  font: 300 1rem/1.5 "Inter", sans-serif;
 }
 
 .btn-port {
@@ -78,7 +78,7 @@
   padding: 10px 20px;
   border-radius: 4px;
   color: #0b5262;
-  font-weight: bold;
+  font: 500 2rem/1.25 "Inter", sans-serif;
   float: right;
   opacity: 1;
 }
