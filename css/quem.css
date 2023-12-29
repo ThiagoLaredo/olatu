@@ -28,7 +28,7 @@
 }
 
 .formacao-tecnica {
-  background-color: var(--primary10);
+  background-color: var(--primary5);
   padding: 20px;
   border-radius: 1rem;
   margin-top: 40px;
@@ -87,5 +87,10 @@
   }
   .texto-quem h2 {
     text-align: center;
+    margin-bottom: 10px;
+  }
+  .texto-quem h3 {
+    text-align: center;
+    max-width: none;
   }
 }
