@@ -58,7 +58,6 @@ flex: 1 1 600px;
 
 @media (max-width: 800px) {
   #cases {
-    background-color: #0F0F54;
     padding: 60px calc((100% - 340px)/2);
     flex-wrap: nowrap;
   }

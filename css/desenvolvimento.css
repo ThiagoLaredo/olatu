@@ -1,5 +1,5 @@
 #desenvolvimento {
-  padding: 80px calc((100% - 1280px)/2);
+  padding: 80px calc((100% - 1320px)/2);
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   gap: 40px;
@@ -9,8 +9,35 @@
   margin-bottom: 8px;
 }
 
-#desenvolvimento p {
+#desenvolvimento h3 {
   position: relative;
+  max-width: 16ch;
+}
+
+
+mark {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  background: transparent;
+}
+
+mark::after {
+  content: '';
+  position: absolute;
+  display: block;
+  z-index: -1;
+  top: 0;
+  left: -2px;
+  bottom: 0;
+  width: 0;
+  transition: width 0.9s ease-in-out 0.5s;
+  background: var(--accent);
+  opacity: 30%;
+}
+
+mark.visible::after {
+  width: calc( 100% + 4px);
 }
 
 /* #desenvolvimento p::after {
@@ -36,10 +63,11 @@
   flex: 1 1 260px;
   border-radius: 16px;
   padding: 1.875rem;
-  background-color: var(--primary10);
+  background-color: var(--primary5);
   box-shadow: 0 4px 3px 0 var(--primary5);
   position: relative;
   z-index: 2;
+  height: 162px;;
 }
   
 .pilar-titulo {
