@@ -84,6 +84,10 @@
 }
 
 @media (max-width: 700px) {
+  .header_menu {
+    padding: 2.4rem 20px;
+  }
+
   .menu a:hover::before {
     display: none;
   }
