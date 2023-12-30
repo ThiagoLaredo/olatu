@@ -6,7 +6,7 @@
 }
 
 #desenvolvimento h2 {
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 #desenvolvimento h3 {
@@ -39,19 +39,6 @@ mark::after {
 mark.visible::after {
   width: calc( 100% + 4px);
 }
-
-/* #desenvolvimento p::after {
-  content: "";
-  height: 50%;
-  width: 100%;
-  display: block;
-  z-index: -5;
-  opacity: 30%;
-  position: absolute;
-  transition: all .3s ease;
-  background: linear-gradient(180deg,transparent 50%,var(--accent) 50%);
-} */
-
 
 .pilares {
   display: flex;
@@ -88,6 +75,9 @@ mark.visible::after {
     display: grid;
     grid-template-columns: 1fr;
     padding: 60px calc((100% - 340px)/2);
+  }
+  #desenvolvimento h3 {
+    max-width: none;
   }
   .pilares {
     flex-wrap: wrap;

@@ -14,7 +14,7 @@
 }
 
 .texto-quem h2 {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .texto-quem h3 {
@@ -72,6 +72,13 @@
   object-position: left;
   border-radius: 1rem;
 }
+#linkedin {
+  width: 40px;
+  height: 40px;
+}
+#linkedin:hover {
+opacity: 70%;
+}
 
 @media (max-width: 800px) {
   #quem-bg {
@@ -80,6 +87,7 @@
   .quem {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 0 20px;
   }
   .texto-quem {
     padding-top: 80px;

@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
         clickable: false,
       },
       on: {
-        init: function () {
-          this.pagination.el.style.display = 'none';
-          hideProjectMenu();
-        },
+        // init: function () {
+        //   this.pagination.el.style.display = 'none';
+        //   hideProjectMenu();
+        // },
         slideChange: function () {
           let currentSlideIndex = this.realIndex;
       
@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
-
 
   initializeSwiper();
 });
