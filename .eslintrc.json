@@ -1,4 +1,7 @@
 {
+    "globals": {
+        "Swiper": true
+      },
     "env": {
         "browser": true,
         "es2021": true
@@ -9,5 +12,5 @@
         "sourceType": "module"
     },
     "rules": {
-    }
+    }  
 }
