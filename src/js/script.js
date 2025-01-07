@@ -4,9 +4,27 @@ import ScrollAnima from './modules/scroll-anima.js';
 import MySwiper from './modules/mySwiper.js';
 import ConsoleTextEffect from './modules/text-effect.js';
 
+import "../css/global.css";
+import "../css/header.css";
+import "../css/introducao.css";
+import "../css/text-typing.css";
+import "../css/clientes.css";
+import "../css/oque.css";
+import "../css/cases.css";
+import "../css/desenvolvimento.css";
+import "../css/como.css";
+import "../css/depoimentos.css";
+import "../css/quem.css";
+import "../css/contato.css";
+import "../css/portifolio.css";
+import "../css/menu-mobile.css";
+import "../css/componentes.css";
+import "../css/tipografia.css";
+import "../css/cores.css";
+import "../css/projetos.css";
+
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
-
 
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
