@@ -32,8 +32,19 @@ img {
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @keyframes slideDown {
@@ -47,13 +58,21 @@ img {
   }
 }
 
-.js [data-anime="scroll"] {
+/* Estado inicial para todas as animações */
+.animate-me {
   opacity: 0;
-  transform: translate3d(-30px, 0, 0);
-  transition: .3s;
+  will-change: opacity, transform; /* Para melhor desempenho */
 }
 
-.js [data-anime="scroll"].ativo {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+/* Cada tipo de animação terá uma posição inicial diferente */
+.animate-bottom {
+  transform: translateY(50px); /* Baixo para cima */
+}
+
+.animate-right {
+  transform: translateX(50px); /* Direita para esquerda */
+}
+
+.animate-left {
+  transform: translateX(-50px); /* Esquerda para direita */
 }

@@ -1,3 +1,10 @@
+import Swiper from 'swiper';
+import { Navigation, Pagination, Mousewheel, HashNavigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/mousewheel';
+
 export default class MySwiper {
   constructor() {
     this.swiper = null;
@@ -8,8 +15,10 @@ export default class MySwiper {
   }
 
   initializeSwiper() {
-    this.swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
+    console.log('Initializing Swiper...');
+    this.swiper = new Swiper('.mySwiper', {
+      modules: [Navigation, Pagination, Mousewheel, HashNavigation],
+      direction: 'vertical',
       speed: 1000,
       mousewheel: true,
       preventClicks: false,
@@ -19,12 +28,15 @@ export default class MySwiper {
       },
       pagination: {
         el: '.swiper-pagination',
-        clickable: false,
+        clickable: true,
       },
       on: {
-        slideChange: this.slideChange.bind(this),
+        slideChange: () => {
+          console.log('Slide changed');
+        },
       },
     });
+    console.log('Swiper initialized:', this.swiper);
 
     const pagination = document.querySelector('.pagination');
     const menuLateral = document.querySelector('.menu-lateral');

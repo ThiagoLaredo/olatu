@@ -1,5 +1,5 @@
 #desenvolvimento {
-  padding: 80px calc((100% - 1320px)/2);
+  padding: 80px 20px;
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   gap: 40px;
@@ -74,7 +74,7 @@ mark.visible::after {
   #desenvolvimento {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 60px calc((100% - 340px)/2);
+    padding: 80px calc((100% - 340px)/2);
   }
   #desenvolvimento h3 {
     max-width: none;
