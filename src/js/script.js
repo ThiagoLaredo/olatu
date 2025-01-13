@@ -1,8 +1,8 @@
 import ScrollSuave from './modules/scroll-suave.js';
 import MenuMobile from './modules/menu-mobile.js';
-import ScrollAnima from './modules/scroll-anima.js';
 import MySwiper from './modules/mySwiper.js';
 import ConsoleTextEffect from './modules/text-effect.js';
+import { initPageOpenAnimations, initScrollAnimations } from './modules/animations.js';
 
 import "../css/global.css";
 import "../css/header.css";
@@ -26,13 +26,14 @@ import "../css/projetos.css";
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
 
-const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
-scrollAnima.init();
 
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
 new MySwiper();
+// Animações de abertura de página e scroll
+initPageOpenAnimations();
+initScrollAnimations();
 
 const targetElement = document.getElementById('text-effect');
 

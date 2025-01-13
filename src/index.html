@@ -20,7 +20,10 @@
     <header class="header">
       <div class="container">
       <div class="header_menu">
-        <a href="index.html"> <img src="./img/logo branco.svg"></a>
+        <a data-menu="logo" href="/">
+          <img src="./img/logo branco.svg" alt="Logo da Olatu">
+          <span class="visually-hidden">Voltar para a página inicial</span>
+        </a>
         <nav class="menu" data-menu="suave">
           <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
             <span id="hamburguer"></span>
@@ -34,9 +37,9 @@
           </ul>
         </nav>
       </div>
-
-      </div>
+     </div>
     </header>
+
     <main class="intro">
       <div class="container intro_container">
         <div class="intro_info">
@@ -49,6 +52,7 @@
           <a class="btn-vazado font-m-b" href="https://api.whatsapp.com/send?phone=5511999415321" target="_blank">Solicitar orçamento</a>
         </div>
       </div> 
+      <div class="img-meditation"></div>
     </main>
 
     <section id="clientes">
@@ -96,7 +100,7 @@
             <img src="./img/logo-tais-pacheco.png" height="100" width="250" alt="" />
           </div>
           <div class="loop--slide">
-            <img src="./img/logo-Grupo-Papaki.png" height="100" width="250" alt="" />
+            <img src="./img/logo-grupo-papaki.png" height="100" width="250" alt="" />
           </div>
           <div class="loop--slide">
             <img src="./img/logo-glue.png" height="100" width="250" alt="" />
@@ -112,9 +116,9 @@
     </section>
 
     <section id="oque">
-      <h2 class="font-xl-b text">O que faço</h2>
-      <div class="serviços" data-anime="scroll">
-        <div class="serviço">
+      <h2 class="font-xl-b text animate-me animate-bottom">O que faço</h2>
+      <div class="serviços">
+        <div class="serviço animate-me animate-bottom">
           <div>
             <h3 class="font-l-b text">Site</h3>
             <ul class="font-s text">
@@ -130,7 +134,7 @@
           </div>
           <a class="btn-color font-s-b" href="https://api.whatsapp.com/send?phone=5511999415321" target="_blank">Solicitar Orçamento</a>
         </div>
-        <div class="serviço">
+        <div class="serviço animate-me animate-bottom">
           <div>
             <h3 class="font-l-b text">E-commerce</h3>
             <ul class="font-s text">
@@ -150,47 +154,47 @@
       </div>
     </section>
     <section id="cases">
-      <h2 class="font-xl-b textwhite">Cases</h2>
+      <h2 class="font-xl-b textwhite animate-me animate-bottom">Cases</h2>
         <div class="case">
-          <div class="mockup" data-anime="scroll">
+          <div class="mockup animate-me animate-left">
           <img src="./img/case-3V.webp">
           </div>
-          <div class="case-bio">  
+          <div class="case-bio animate-me animate-right">  
             <h3 class="font-l-b textwhite">3V Capital</h3>
             <span class="font-s textwhite">Gestão de Recursos</span>
             <p class="font-s textwhite">Criação de Identidade Visual da marca e Site Institucional com gerenciador para atualização constante do conteúdo informativo aos clientes.</p>
             </div>
         </div>  
         <div class="case case-2">
-          <div class="mockup" data-anime="scroll">
+          <div class="mockup animate-me animate-left">
           <img src="./img/case-brigitte2.webp">
           </div>
-          <div class="case-bio">  
+          <div class="case-bio animate-me animate-right">  
             <h3 class="font-l-b textwhite">Brigitte</h3>
             <span class="font-s textwhite">Produtora audiovisual</span>
             <p class="font-s textwhite">A Brigitte Filmes necessitava de um Site com design criativo destacando os filmes da Produtora. O desafio foi destacar esse conteúdo de vídeos e ao mesmo tempo deixar o layout limpo, interativo e rápido. </p>
           </div>
         </div> 
         <div class="case">
-          <div class="mockup" data-anime="scroll">
+          <div class="mockup animate-me animate-left">
           <img src="./img/case-mya.webp">
           </div>
-          <div class="case-bio">  
+          <div class="case-bio animate-me animate-right">  
             <h3 class="font-l-b textwhite">MYA Swimwear</h3>
             <span class="font-s textwhite">Moda praia</span>
             <p class="font-s textwhite">Criação de identidade visual e E-commerce com sistema completo de vendas e estoque, ferramentas para geração de leads e sistemas de pagamento e entrega diversos.</p>
           </div>
         </div>
-        <a id="btn-cases" class="btn-anime font-m-b" href="./projetos.html">- Ver portifólio</a>
+        <a id="btn-cases" class="btn-anime font-m-b animate-me animate-bottom" href="./projetos.html">- Ver portifólio</a>
       </div>           
     </section>
 
-    <section id="desenvolvimento">
-      <div class="desenvolvimento-titulo">
+    <section id="desenvolvimento" class="container">
+      <div class="desenvolvimento-titulo  animate-me animate-left">
         <h2 class="font-xl-b">Desenvolvimento</h2>
         <h3 class="font-l">Projetos web com <mark>foco em resultados.</mark></h3>
       </div>
-        <ul class="pilares" data-anime="scroll">
+        <ul class="pilares animate-me animate-right">
           <li class="font-s text">
             <div class="pilar-titulo">
             <img src="./img/browser.svg">
@@ -212,7 +216,7 @@
             </div>
             Em busca da conversão de clientes.
           </li>
-          <li class="font-s" text>
+          <li class="font-s text">
             <div class="pilar-titulo">
               <img src="./img/lock.svg">
               <h3 class="font-m-b text">Segurança</h3>
@@ -224,8 +228,8 @@
  
     <section id="depoimentos">
       <div class="container">
-        <h2 class="font-xl-b text">Depoimentos</h2>
-        <div class="depoimentos-todos">
+        <h2 class="font-xl-b text animate-me animate-bottom">Depoimentos</h2>
+        <div class="depoimentos-todos animate-me animate-left">
 
           <div class="depoimento">
             <div class="avatar">
@@ -268,24 +272,24 @@
 
     <section id="quem-bg">
       <div class="quem container">
-        <div class="texto-quem">
+        <div class="texto-quem animate-me animate-left">
           <h2 class="font-xl-b text">Quem somos</h2>
           <h3 class="font-l text">A Olatu é uma <mark>desenvolvedora web</mark> com visão em design e negócios.</h3>
           <div class="formacao-tecnica">
             <h4 class="font-xs text">Certificações</h4>
             <ul class="font-s text">
-            <li><a href="https://www.lewagon.com/pt-BR" target="_blank"><b>Le Wagon</b></a>: eleito o melhor bootcamp de programação do mundo.</li> 
-            <li><b><a href="https://www.origamid.com/" target="_blank">Origamid</b></a>: formação em front-end design.</p></li>
+            <li><span class="font-s-b"><a href="https://www.lewagon.com/pt-BR" target="_blank">Le Wagon</span></a>: eleito o melhor bootcamp de programação do mundo.</li> 
+            <li><span class="font-s-b"><a href="https://www.origamid.com/" target="_blank">Origamid</span></a>: formação em front-end design.</p></li>
             </ul> 
           </div>
         </div>
-        <img id="imagem-quem" src="./img/quem.webp">
+        <img id="imagem-quem" class="animate-me animate-right" src="./img/quem.webp">
       </div> 
     </section>
 
     <footer id="contato">
       <div class="rodape-container">
-        <div class="rodape-texto">
+        <div class="rodape-texto animate-me animate-bottom">
           <p class="font-l-b">Estamos disponíveis para novos projetos. Entre em contato e marcamos uma conversa.</p>
           <ul>
             <li><a class="font-m-b" href="malito:thiago@olatu.com.br" target="_blank">thiago@olatu.com.br</a></li>
