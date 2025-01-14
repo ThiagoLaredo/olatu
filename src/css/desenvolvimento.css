@@ -11,7 +11,6 @@
 
 #desenvolvimento h3 {
   position: relative;
-  max-width: 16ch;
 }
 
 
@@ -41,22 +40,27 @@ mark.visible::after {
 }
 
 .pilares {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
+  grid-gap: 20px; /* Espaço entre os itens */
+  justify-items: center; /* Centraliza os itens horizontalmente */
 }
 
 .pilares li {
-  flex: 1 1 260px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 16px;
-  padding: 1.875rem;
+  padding: 1.5rem;
   background-color: var(--primary5);
-  box-shadow: 0 4px 3px 0 var(--primary5);
+  border: 1px solid var(--primary50);
   position: relative;
   z-index: 2;
-  height: 162px;;
+  min-height: 180px; /* Altura mínima */
+  display: flex;
+  flex-direction: column; /* Mantém o conteúdo em coluna */
+  align-items: flex-start; /* Alinha todo o conteúdo ao topo */
 }
-  
+
 .pilar-titulo {
   display: flex;
   align-items: center;
@@ -65,9 +69,20 @@ mark.visible::after {
 }
 
 .pilar-titulo img {
- width: 36px;
- height: 36px;
+  width: 40px; /* Tamanho do ícone */
+  height: 40px;
 }
+
+.pilares li p {
+  margin: 0;
+  margin-top: auto; /* Posiciona o texto na parte inferior do item */
+  color: var(--primary80); /* Cor do texto */
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+
+
 
 @media (max-width: 800px) {
 

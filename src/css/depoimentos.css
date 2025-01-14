@@ -1,5 +1,5 @@
 #depoimentos {
-  background-color: var(--secondary10);
+  background-color: var(--primary10);
   padding: 80px 20px;
 }
 
@@ -20,7 +20,7 @@
   background-color: #fff;
   padding: 40px;
   border-radius: 1rem;
-  box-shadow: 0 4px 3px 0 var(--secondary5);
+  border: 1px solid var(--primary50);
 }
 
 .avatar {
