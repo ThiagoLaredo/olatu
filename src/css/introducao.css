@@ -28,6 +28,9 @@
 } 
 
 .intro_info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   z-index: 4;
   position: relative;
 }
@@ -35,15 +38,13 @@
 .intro h1 {
   text-align: center;
   font-size: 3.2rem;
-  max-width: 62.5rem;
-  margin: 1.9375rem auto;
+  max-width: 50rem;
   position: relative;
   z-index: 4;
 }
 
 .intro p {
   text-align: center;
-  margin: 6.6rem auto 1.6rem auto ;
   position: relative;
   z-index: 4;
 }
