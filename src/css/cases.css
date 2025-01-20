@@ -1,75 +1,115 @@
+/* Seção Cases */
 #cases {
-  background-color: var(--secondary);
-  padding: 80px calc((100% - 1080px)/2);
+  background-color: var(--bg-dark); /* Fundo escuro */
+  color: var(--text-white);         /* Texto claro */
+  padding: 80px calc((100% - 1080px) / 2);
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
+  align-items: center;
 }
 
+/* Título da Seção */
 #cases h2 {
   text-align: center;
   margin-bottom: 60px;
+  color: var(--text-white); /* Deixa o título em branco para menos cor */
+  font-weight: 700;
 }
 
+/* Cada Case */
 .case {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  padding: 20px 0;
-  border-radius: 1rem;
-  flex: 1 1 600px;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 40px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Linha sutil */
+  padding-bottom: 20px;
 }
 
+.case:last-child {
+  border-bottom: none; /* Remove a linha no último */
+}
+
+/* Alterna a ordem em um case específico (opcional) */
 .case-2 {
-flex-direction: row-reverse;
-flex: 1 1 600px;
+  flex-direction: row-reverse;
 }
 
-.case-brigitte img {
-  margin-left: 120px ;
-}
-
+/* Área da Mockup (Imagem) */
 .mockup {
-  flex: 1 1 260px;
-  position: relative;
+  flex: 1;
+  max-width: 40%;
 }
-
 .mockup img {
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
+/* Bio / Texto do Case */
 .case-bio {
-  flex: 1 1 260px;
+  flex: 1;
+  max-width: 50%;
 }
 
+/* Título do Case */
+.case-bio h3 {
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Subtítulo do Case */
 .case-bio span {
   display: block;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7); /* Tom mais claro do texto branco */
+  font-weight: 400;
 }
 
+/* Texto descritivo do Case */
 .case-bio p {
-  max-width: 48ch;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
-#btn-cases {
-  align-self: center;
+/* #btn-cases {
+  background-color: var(--primary);
+  color: var(--text-white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+#btn-cases:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  transform: scale(1.03);
+} */
+
+/* Responsividade */
 @media (max-width: 800px) {
   #cases {
-    padding: 60px calc((100% - 340px)/2);
-    flex-wrap: nowrap;
-  }
-  .case {
-    gap: 20px;
-    margin-bottom: 60px;
+    padding: 60px 20px;
   }
 
-  .case-bio p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: #fff;
-    max-width: none;
+  .case {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mockup {
+    max-width: 100%;
+  }
+
+  .case-bio {
+    max-width: 100%;
   }
 }

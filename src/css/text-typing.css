@@ -1,26 +1,22 @@
-.hidden {
-  opacity:0;
-}
 .console-container {
-  font-size:2.4em;
-  text-align:center;
-  display:block;
-  color: #64d97b;
-  bottom:0;
-  top:20px;
-  left:0;
-  right:0;
-}
-.console-underscore {
-  display:inline-block;
-  position:relative;
+  font-size: 2.4em;
+  text-align: center;
+  display: block;
+  color: var(--alert); /* Ajuste conforme necessário */
+  /* margin: 0 auto; */
+  position: relative;
 }
 
+.console-underscore {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  font-weight: bold;
+}
 
 @media (max-width: 800px) {
   .console-container {
-width:300px;
-
+    font-size: 1.8em;
+    width: 100%;
   }
-   
 }

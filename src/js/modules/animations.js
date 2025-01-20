@@ -4,6 +4,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 gsap.registerPlugin(ScrollTrigger);
 
 export const initPageOpenAnimations = () => {
+  if (!window.initPageOpenAnimationsCalled) {
+    window.initPageOpenAnimationsCalled = true;
+    console.log("initPageOpenAnimations executada pela primeira vez");
+  }
+
+  // Resetar elementos visuais antes de iniciar animações
+  gsap.set(".page-open-animate", { opacity: 0 });
+  gsap.set(".intro", { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", opacity: 0 });
+
     // Define os elementos que terão animações de abertura com a classe 'page-open-animate'
     const pageOpenElements = document.querySelectorAll(".page-open-animate");
     if (pageOpenElements.length > 0) {
@@ -83,7 +92,7 @@ export const initPageOpenAnimations = () => {
         if (consoleContainer) {
             introTimeline.fromTo(
                 consoleContainer,
-                { opacity: 0, y: 20 },
+                { opacity: 0, y: 0 },
                 { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
             );
         }
@@ -126,6 +135,79 @@ export const initPageOpenAnimations = () => {
         );
     }
 };
+export class ConsoleTextEffect {
+  constructor(words, id, colors) {
+    this.words = words;
+    this.target = document.getElementById(id);
+    this.colors = colors || ['#fff'];
+    this.currentWordIndex = 0; // Índice da palavra atual
+    this.currentLetterIndex = 0; // Índice da letra atual
+    this.isDeleting = false; // Estado: apagando ou digitando
+    this.typingSpeed = 100; // Velocidade de digitação em ms
+    this.waitBetweenWords = 1000; // Tempo entre palavras
+    this.underscore = document.getElementById('console');
+
+    if (this.target) {
+      this.init();
+    } else {
+      console.error(`Target element with ID '${id}' not found.`);
+    }
+  }
+
+  init() {
+    // Garante que o texto inicial está vazio e a cor correta
+    this.target.textContent = '';
+    this.target.style.color = this.colors[this.currentWordIndex];
+
+    // Efeito de piscar do underscore
+    if (this.underscore) {
+      gsap.to(this.underscore, {
+        opacity: 0,
+        repeat: -1,
+        yoyo: true,
+        duration: 0.5,
+        ease: 'power1.inOut',
+      });
+    }
+
+    // Inicia o loop de digitação
+    this.loop();
+  }
+
+  loop() {
+    const currentWord = this.words[this.currentWordIndex];
+    const isComplete = this.currentLetterIndex === currentWord.length;
+
+    if (this.isDeleting) {
+      // Apagar caracteres
+      this.currentLetterIndex--;
+    } else {
+      // Digitar caracteres
+      this.currentLetterIndex++;
+    }
+
+    // Atualiza o texto no DOM
+    const visibleText = currentWord.substring(0, this.currentLetterIndex);
+    this.target.textContent = visibleText;
+
+    // Controle de estado (completo ou apagado)
+    if (!this.isDeleting && isComplete) {
+      // Pausa antes de apagar
+      this.isDeleting = true;
+      setTimeout(() => this.loop(), this.waitBetweenWords);
+      return;
+    } else if (this.isDeleting && this.currentLetterIndex === 0) {
+      // Próxima palavra
+      this.isDeleting = false;
+      this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
+      this.target.style.color = this.colors[this.currentWordIndex];
+    }
+
+    // Próxima chamada do loop
+    const typingDelay = this.isDeleting ? this.typingSpeed / 2 : this.typingSpeed;
+    setTimeout(() => this.loop(), typingDelay);
+  }
+}
 
 export const initScrollAnimations = () => {
     // Seleciona todas as sections e o footer, exceto a introdução
@@ -199,6 +281,5 @@ export const initScrollAnimations = () => {
     } else {
       console.warn("Nenhuma section ou footer (exceto .introducao) foi encontrada.");
     }
-  };
-  
-  
+
+};

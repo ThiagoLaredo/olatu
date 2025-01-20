@@ -76,3 +76,22 @@ img {
 .animate-left {
   transform: translateX(-50px); /* Esquerda para direita */
 }
+
+.highlight {
+  display: inline-block;
+  position: relative;
+  color: inherit;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%; /* Altura do grifo */
+  width: 100%; /* Inicialmente oculto */
+  background: var(--alert); /* Usa a cor primária definida */
+  z-index: -1; /* Coloca o grifo atrás do texto */
+  transition: width 0.5s ease-out; /* Animação suave */
+}
+
