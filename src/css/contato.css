@@ -1,8 +1,12 @@
 /* Seção de contato/rodapé */
-#contato {
+.contato-back {
   background-color: var(--bg-dark); /* Fundo escuro */
+}
+
+/* Seção de contato/rodapé */
+#contato {
   color: var(--text-white);        /* Texto claro */
-  padding: 60px 20px;              /* Reduzi um pouco o padding */
+  padding: 80px 20px;              /* Reduzi um pouco o padding */
 }
 
 /* Layout principal do rodapé */

@@ -1,6 +1,9 @@
-#depoimentos {
+.depoimentos-back {
   background-color: #F5F7FA; /* usa novamente o cinza claro */
-  color: var(--text);               /* Texto principal */
+}
+
+#depoimentos {
+  color: var(--text); 
   padding: 80px 20px;
 }
 
@@ -14,7 +17,7 @@
   /* padding: 0 20px; */
   display: flex;
   flex-wrap: nowrap;
-  gap: 40px;
+  gap: 20px;
   justify-content: center; /* Centraliza os cards */
 }
 
