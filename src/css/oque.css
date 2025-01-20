@@ -1,15 +1,18 @@
 #oque {
-  background-color: var(--primary20);
+  background-color: #F5F7FA; /* se desejar usar um leve cinza, --bg-muted */
+  color: var(--text);
   padding: 80px 20px;
   display: flex;
   flex-direction: column;
 }
 
+/* Título principal */
 #oque h2 {
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* Contêiner dos cards de serviço */
 .serviços {
   display: flex;
   flex-wrap: nowrap;
@@ -18,45 +21,48 @@
   gap: 20px;
 }
 
+/* Card de serviço */
 .serviço {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  max-width: 450px;          /* Limita a largura para não ficar muito grande */
   padding: 2rem;
   border-radius: 16px;
   margin: 0.9375rem;
-  min-height: 680px;
-  background: #fff;
-  border: 1px solid var(--primary50);
+  min-height: 600px;         /* Reduzido de 680px para 600px */
+  background: var(--bg-light); /* Fundo igual ao do site para ficar bem minimal */
+  border: 1px solid #E5E7EB;   /* Linha sutil para demarcar o card */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra muito leve e discreta */
 }
 
+/* Título dentro do card */
 .serviço h3 {
   text-align: center;
   margin-bottom: 40px;
-  color: var(--primary)
+  color: var(--primary); /* Mantém cor principal como pequeno destaque */
 }
 
+/* Lista de itens no card */
 .serviço li {
-  padding: 0.375rem 0;
-  text-align: left;
   position: relative;
-  padding-left: 2rem; /* Espaço para o ícone */
+  padding: 0.375rem 0 0.375rem 2rem; /* Espaço para o ícone e texto */
+  color: var(--text);
 }
 
+/* Ícone da lista */
 .serviço li::before {
-  content: "\f058"; /* Código do ícone (fa-check-circle) */
-  font-family: "Font Awesome 6 Free"; /* Família do Font Awesome */  
+  content: "\f058";             /* Código do ícone (fa-check-circle) */
+  font-family: "Font Awesome 6 Free";
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  color: var(--primary); /* Cor do ícone */
-  font-size: 1rem; /* Tamanho do ícone */
-  z-index: -1; /* Coloca atrás do texto */
+  color: var(--primary);        /* Mantém o ícone na cor principal */
+  font-size: 1rem;
 }
-
 
 .serviço li::after {
   content: "";
@@ -64,34 +70,32 @@
   width: 100%;
   height: 1px;
   border-radius: 5px;
-  background: var(--secondary20);
+  border-top: 1px dashed var(--primary); /* Linha tracejada com a cor primária */
   margin-top: 0.625rem;
-  position: relative;
 }
 
+
+/* Remove a linha do último item */
 .serviço li:last-child::after {
   display: none;
 }
 
+/* Responsividade */
 @media (max-width: 800px) {
-
   #oque {
-    padding: 60px calc((100% - 340px)/2);
+    padding: 60px calc((100% - 340px) / 2);
   }
 
   .serviços {
-    flex-direction: column;    
+    flex-direction: column;
     gap: 40px;
     align-self: center;
     width: 100%;
   }
 
   .serviço {
-    flex-direction: column;
-    justify-content: flex-start;
     max-width: 100%;
-    min-height: 0;
+    min-height: auto; /* Permite que o card cresça conforme o conteúdo */
     margin: 0;
-    width: 100%;
   }
 }

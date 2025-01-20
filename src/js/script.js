@@ -1,8 +1,7 @@
 import ScrollSuave from './modules/scroll-suave.js';
 import MenuMobile from './modules/menu-mobile.js';
 import MySwiper from './modules/mySwiper.js';
-import ConsoleTextEffect from './modules/text-effect.js';
-import { initPageOpenAnimations, initScrollAnimations } from './modules/animations.js';
+import { initPageOpenAnimations, initScrollAnimations, ConsoleTextEffect } from './modules/animations.js';
 
 import "../css/global.css";
 import "../css/header.css";
@@ -23,29 +22,33 @@ import "../css/tipografia.css";
 import "../css/cores.css";
 import "../css/projetos.css";
 
-const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
-scrollSuave.init();
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("DOM completamente carregado.");
 
+  // Inicializa o Scroll Suave
+  const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
+  scrollSuave.init();
 
-const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
-menuMobile.init();
+  // Inicializa o Menu Mobile
+  const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+  menuMobile.init();
 
-new MySwiper();
-// Animações de abertura de página e scroll
-initPageOpenAnimations();
-initScrollAnimations();
+  // Inicializa o Swiper
+  new MySwiper();
 
-const targetElement = document.getElementById('text-effect');
+  // Animações de abertura de página e scroll
+  initPageOpenAnimations();
+  initScrollAnimations();
 
-if (targetElement) {
-  const textEffect = new ConsoleTextEffect(['Site', 'E-commerce', 'Design'], 'text-effect', ['#64d97b', '#64d97b', '#64d97b']);
-  console.log(textEffect);
-} else {
-  console.error('Target element not found. The script will not be executed.');
-}
-
-// document.addEventListener('DOMContentLoaded', function() {
-  // Your code here
-  // const textEffect = new ConsoleTextEffect(['Site', 'E-commerce', 'Design'], 'text-effect', ['#64d97b', '#64d97b', '#64d97b']);
-  // console.log(textEffect);
-// });
+  // Inicializa o efeito de texto digitado
+  const targetElement = document.getElementById('text-effect');
+  if (targetElement) {
+    new ConsoleTextEffect(
+      ['Criatividade', 'Inovação', 'Resultados'], // Palavras a serem exibidas
+      'text-effect', // ID do elemento de destino
+      ['#64d97b', '#64d97b', '#64d97b'] // Cores das palavras
+    );
+  } else {
+    console.error('Elemento de destino para o texto digitado não encontrado.');
+  }
+});

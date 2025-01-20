@@ -1,10 +1,11 @@
 .intro {
   position: relative;
-  background: linear-gradient(180deg, var(--primary), var(--accent));
+  background: linear-gradient(180deg, var(--primary), var(--primary));
   min-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
+  opacity: 0;
 }
 
 .img-meditation {
@@ -25,6 +26,7 @@
 
 .intro_container {
   position: relative;
+  padding: 20px;
 } 
 
 .intro_info {
@@ -33,6 +35,8 @@
   gap: 20px;
   z-index: 4;
   position: relative;
+  color: var(--text-white);
+  opacity: 1;
 }
 
 .intro h1 {
@@ -56,7 +60,6 @@
     max-width: none;
   }
   .intro p {
-    margin: 2rem 0;
     max-width: 36ch;
   }
   .seta-animada {
@@ -69,11 +72,7 @@
   .intro {
     min-height: 80vh;
   }
-  .intro h1 {
-    margin: 1.8rem auto;
-  }
   .intro p {
-    margin: 5rem auto 1.6rem auto ;
     max-width: 30ch;
 
   }

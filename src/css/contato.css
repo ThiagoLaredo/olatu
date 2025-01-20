@@ -1,61 +1,88 @@
+/* Seção de contato/rodapé */
 #contato {
-  background-color: var(--primary);
-  padding: 80px 20px;
+  background-color: var(--bg-dark); /* Fundo escuro */
+  color: var(--text-white);        /* Texto claro */
+  padding: 60px 20px;              /* Reduzi um pouco o padding */
 }
 
-.rodape-container {
-  max-width: 1320px;
-  margin: 0 auto;
-}
-
+/* Layout principal do rodapé */
 .rodape-texto {
-  padding:  0 0 40px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   gap: 30px;
+  margin: 0;            /* Remove margens padrões */
 }
 
+/* Parágrafo de apresentação */
 .rodape-texto p {
-  color: var(--bg);
-  max-width: 30ch;
+  color: var(--text-secondary); /* Texto secundário no fundo escuro */
+  max-width: 30ch;             /* Limite de largura para melhor leitura */
+  margin: 0;                   /* Remove margem extra */
 }
 
+/* Lista de contatos (links) */
 .rodape-texto li {
-  color: var(--bg);
   margin-bottom: 0.5rem;
+  list-style: none;  /* Remove marcadores se quiser */
 }
 
+/* Links de contato */
 .rodape-texto a {
-  color: var(--bg);
+  color: var(--text-white);    /* Usa texto branco para bom contraste */
+  text-decoration: none;
+  font-weight: 400;            /* Peso regular */
+  transition: color 0.3s ease;
 }
 
+/* Hover sutil nos links */
 .rodape-texto a:hover {
-  color: var(--textcontrast);
+  color: var(--secondary);     /* Um tom azul (hover) */
+  text-decoration: underline;
 }
 
+/* Ícone do LinkedIn menor */
+#linkedin {
+  width: 24px;     /* Reduz o tamanho do ícone */
+  height: 24px;
+  vertical-align: middle;  /* Alinha melhor com o texto */
+}
+
+/* Seção de copyright */
 .copy {
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .copy span {
-  color: #d0daf2;
+  color: var(--text-secondary);
   font-size: 0.75rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
+/* Responsividade */
 @media (max-width: 800px) {
-
   #contato {
-    padding: 20px 0;
+    padding: 40px 20px;
   }
 
   .rodape-texto {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr; /* Coluna única no mobile */
+    gap: 30px;
+    text-align: center;         /* Centraliza texto/itens */
   }
 
   .rodape-container {
-    padding: 10px 20px;
+    padding: 0;                 /* Remove padding extra no container */
+  }
+
+  .rodape-texto p {
+    max-width: none;           /* Texto ocupa toda a largura no mobile */
+  }
+
+  .lista-contatos {
+    display: flex;             /* Alinha itens em linha */
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 }

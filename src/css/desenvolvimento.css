@@ -1,107 +1,116 @@
+/* Seção Desenvolvimento que você já tem */
 #desenvolvimento {
   padding: 80px 20px;
   display: grid;
-  grid-template-columns: 0.8fr 1fr;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  background-color: var(--bg-light); /* Fundo claro */
+  color: var(--text);               /* Texto escuro */
+}
+
+.desenvolvimento-img img {
+  border-radius: 16px;
+}
+
+/* Título principal da seção */
+#desenvolvimento h2 {
+  color: var(--text);
+  position: relative;
+}
+
+#desenvolvimento h2::after, #depoimentos h2::after {
+  content: "";
+  display: inline-block;
+  width: 8px; /* Tamanho do quadrado */
+  height: 8px;
+  border-radius: 50px; 
+  background-color: var(--primary); /* Cor primária */
+  margin-left: 6px; /* Pequeno espaçamento após o texto */
+}
+
+.desenvolvimento-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 40px;
 }
 
-#desenvolvimento h2 {
-  margin-bottom: 20px;
+.desenvolvimento-texto strong {
+  color: var(--primary); /* Cor de destaque */
 }
 
-#desenvolvimento h3 {
-  position: relative;
-}
-
-
-mark {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  background: transparent;
-}
-
-mark::after {
-  content: '';
-  position: absolute;
-  display: block;
-  z-index: -1;
-  top: 0;
-  left: -2px;
-  bottom: 0;
-  width: 0;
-  transition: width 0.9s ease-in-out 0.5s;
-  background: var(--accent);
-  opacity: 30%;
-}
-
-mark.visible::after {
-  width: calc( 100% + 4px);
-}
-
+/* Lista de Pilares */
 .pilares {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
-  grid-gap: 20px; /* Espaço entre os itens */
-  justify-items: center; /* Centraliza os itens horizontalmente */
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  grid-gap: 20px 40px;
+  justify-items: center;
 }
 
+/* Cada Pilar (sem caixa, sem efeito hover) */
 .pilares li {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 16px;
-  padding: 1.5rem;
-  background-color: var(--primary5);
-  border: 1px solid var(--primary50);
-  position: relative;
-  z-index: 2;
-  min-height: 180px; /* Altura mínima */
   display: flex;
-  flex-direction: column; /* Mantém o conteúdo em coluna */
-  align-items: flex-start; /* Alinha todo o conteúdo ao topo */
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  /* Removemos background, borda, sombra e transição */
 }
 
+/* Título do Pilar + Ícone */
 .pilar-titulo {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
 }
 
-.pilar-titulo img {
-  width: 40px; /* Tamanho do ícone */
-  height: 40px;
+/* Ícone circular maior */
+.pilar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary);
+  color: #FFF;
+  border-radius: 50%;
+  font-size: 16px; /* Tamanho do ícone */
 }
 
+/* Ajuste o ícone interno, se quiser maior ou menor */
+.pilar-icon i {
+  font-size: inherit;
+}
+
+/* Texto dentro do pilar */
 .pilares li p {
   margin: 0;
-  margin-top: auto; /* Posiciona o texto na parte inferior do item */
-  color: var(--primary80); /* Cor do texto */
   font-size: 0.875rem;
   line-height: 1.5;
+  color: var(--text-secondary);
 }
 
-
-
-
+/* Responsividade */
 @media (max-width: 800px) {
 
   #desenvolvimento {
-    display: grid;
     grid-template-columns: 1fr;
-    padding: 80px calc((100% - 340px)/2);
+    gap: 40px;
   }
-  #desenvolvimento h3 {
-    max-width: none;
-  }
+
   .pilares {
-    flex-wrap: wrap;
+    grid-template-columns: 1fr; /* Uma coluna */
   }
+
   .desenvolvimento-titulo {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
   }
+
   .desenvolvimento-titulo p {
     text-align: center;
   }

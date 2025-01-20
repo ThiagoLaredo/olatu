@@ -1,55 +1,81 @@
 #depoimentos {
-  background-color: var(--primary10);
+  background-color: #F5F7FA; /* usa novamente o cinza claro */
+  color: var(--text);               /* Texto principal */
   padding: 80px 20px;
 }
 
 #depoimentos h2 {
-  text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  color: var(--text); /* Usa a cor principal do texto para um visual minimal */
 }
 
+/* Contêiner de todos os depoimentos */
 .depoimentos-todos {
-  padding: 0 20px;
+  /* padding: 0 20px; */
   display: flex;
   flex-wrap: nowrap;
   gap: 40px;
+  justify-content: center; /* Centraliza os cards */
 }
 
+/* Card de cada depoimento */
 .depoimento {
   flex: 1;
-  background-color: #fff;
+  max-width: 380px;              /* Limita a largura do card */
+  background-color: var(--bg-light); /* Fundo claro */
   padding: 40px;
   border-radius: 1rem;
-  border: 1px solid var(--primary50);
+  border: 1px solid #E5E7EB;     /* Borda bem sutil */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra muito leve e discreta */
 }
 
+/* Área do avatar */
 .avatar {
   display: flex;
-  flex-wrap: nowrap;
   gap: 10px;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.avatar span {
-  letter-spacing: 0.1rem;
-  text-transform: uppercase ;
-}
-
-.depoimento img {
+.avatar img {
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
-  overflow: hidden;
-  background-image: linear-gradient(var(--primary), var(--accent));
-  padding: 6px;
-  margin: 0.3125rem;
-  box-shadow: 0 0 0 4px #1f1f26;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  padding: 4px;
+  background-color: var(--primary); /* Mantém fundo claro em volta da imagem */
+  box-shadow: 0 0 0 2px #000; /* Suave contorno */
 }
 
+.avatar h3 {
+  color: var(--text);    /* Nome na cor de texto principal */
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
 
+.avatar span {
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--text-secondary); /* Subtítulo mais suave */
+  font-size: 0.75rem;
+}
+
+/* Texto do depoimento */
+.depoimento p {
+  color: var(--text-secondary);  /* Mantém o tom secundário */
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Responsividade */
 @media (max-width: 800px) {
   .depoimentos-todos {
-  flex-direction: column;    
-}
+    flex-direction: column; /* Coluna no mobile */
+    align-items: center;    /* Centraliza os cards */
+    gap: 20px;
+  }
+
+  .depoimento {
+    max-width: 100%;
+  }
 }
