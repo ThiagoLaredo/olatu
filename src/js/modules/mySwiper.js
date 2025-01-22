@@ -1,21 +1,23 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Mousewheel, HashNavigation } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel, HashNavigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel';
 
-export default class MySwiper {
+export class MySwiperProjetos {
   constructor() {
     this.swiper = null;
-
-    document.addEventListener('DOMContentLoaded', () => {
-      this.initializeSwiper();
-    });
+    this.initializeSwiper(); // Chamando dentro do construtor
   }
 
   initializeSwiper() {
-    console.log('Initializing Swiper...');
+
+    // Verifica se .mySwiper existe na página
+    const container = document.querySelector('.mySwiper');
+    if (!container) return;
+
+    console.log('Initializing Swiper Projetos...');
     this.swiper = new Swiper('.mySwiper', {
       modules: [Navigation, Pagination, Mousewheel, HashNavigation],
       direction: 'vertical',
@@ -131,6 +133,74 @@ export default class MySwiper {
   }
 }
 
+/**
+ * Classe para o Slider de Depoimentos (horizontal, com setas)
+ */
+export class MySwiperDepoimentos {
+  constructor() {
+    this.swiper = null;
+    this.initializeSwiper();
+  }
 
+  initializeSwiper() {
+    const container = document.querySelector('.depoimentosSwiper');
+    if (!container) return;
 
+    console.log('Initializing Swiper Depoimentos...');
+    this.swiper = new Swiper('.depoimentosSwiper', {
+      modules: [Navigation, Pagination],
+      direction: 'horizontal',
+      slidesPerView: 3, // Mostra 3 slides ao mesmo tempo
+      spaceBetween: 20, // Espaçamento entre os slides (em pixels)
+      speed: 600,
+      // se quiser setas
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // bullets
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
 
+    console.log('Depoimentos Swiper initialized:', this.swiper);
+  }
+
+  // Caso precise de métodos extras, adicione aqui
+}
+
+/**
+ * Classe para Slider de Desenvolvimento (horizontal, só paginação)
+ */
+export class MySwiperDesenvolvimento {
+  constructor() {
+    this.swiper = null;
+    this.initializeSwiper();
+  }
+
+  initializeSwiper() {
+    const container = document.querySelector('.desenvolvimentoSwiper');
+    if (!container) return;
+
+    console.log('Initializing Swiper Desenvolvimento...');
+    this.swiper = new Swiper('.desenvolvimentoSwiper', {
+      modules: [Pagination, Autoplay],
+      direction: 'horizontal',
+      speed: 600,
+      // sem setas, só paginação
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true, // Habilita o loop infinito
+      autoplay: {
+        delay: 3000, // Tempo em milissegundos entre os slides (3 segundos)
+        disableOnInteraction: false, // Continua o autoplay mesmo após interação do usuário
+      },
+    });
+
+    console.log('Desenvolvimento Swiper initialized:', this.swiper);
+  }
+}

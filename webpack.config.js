@@ -83,7 +83,7 @@ export default {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: 'style.css', // Salva o CSS na pasta 'css'
     }),
     ...htmlPlugins,
     new CopyWebpackPlugin({

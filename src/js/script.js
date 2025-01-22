@@ -1,6 +1,10 @@
 import ScrollSuave from './modules/scroll-suave.js';
 import MenuMobile from './modules/menu-mobile.js';
-import MySwiper from './modules/mySwiper.js';
+import {
+  MySwiperProjetos, 
+  MySwiperDepoimentos, 
+  MySwiperDesenvolvimento 
+} from './modules/mySwiper.js';
 import { initPageOpenAnimations, initScrollAnimations, ConsoleTextEffect } from './modules/animations.js';
 
 import "../css/global.css";
@@ -33,8 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
   menuMobile.init();
 
-  // Inicializa o Swiper
-  new MySwiper();
+  // Slider vertical de projetos
+  new MySwiperProjetos();
+
+  // Slider horizontal de depoimentos
+  new MySwiperDepoimentos();
+
+  // Slider horizontal de desenvolvimento
+  new MySwiperDesenvolvimento();
+
 
   // Animações de abertura de página e scroll
   initPageOpenAnimations();
@@ -44,9 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const targetElement = document.getElementById('text-effect');
   if (targetElement) {
     new ConsoleTextEffect(
-      ['Criatividade', 'Inovação', 'Resultados'], // Palavras a serem exibidas
-      'text-effect', // ID do elemento de destino
-      ['#64d97b', '#64d97b', '#64d97b'] // Cores das palavras
+      ['Criatividade', 'Inovação', 'Resultados'],
+      'text-effect',
+      ['#64d97b', '#64d97b', '#64d97b']
     );
   } else {
     console.error('Elemento de destino para o texto digitado não encontrado.');
