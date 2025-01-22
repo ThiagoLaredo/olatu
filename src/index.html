@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olatu - Desenvolvimento Web</title>
     <meta name="description" content="Desenvolvimento de Sites e E-commerces com design, performance e resultados">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +32,7 @@
             <li><a href="./projetos.html">Projetos</a></li>
             <li><a href="#oque">O que</a></li>
             <li><a href="#desenvolvimento">Como</a></li>
-            <li><a href="#quem-bg">Quem</a></li>
+            <li><a href="#quem">Quem</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
@@ -199,10 +198,22 @@
     </section>
 
     <section id="desenvolvimento" class="container">
-
-
-      <div class="desenvolvimento-img animate-me animate-left">
-        <img src="./img/desenvolvimento.webp" alt="Desenvolvimento Web">  
+      <div class="swiper desenvolvimentoSwiper animate-left">
+        <div class="swiper-wrapper">
+      
+          <div class="swiper-slide">
+            <img src="./img/desenvolvimento.webp" alt="Desenvolvimento Web">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/desenvolvimento.webp" alt="Segunda imagem">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/quem.webp" alt="Terceira imagem">
+          </div>
+      
+        </div>
+        <!-- Bullets da paginação -->
+        <div class="swiper-pagination"></div>
       </div>
       <div class="desenvolvimento-texto animate-me animate-right">
         <div >
@@ -275,47 +286,67 @@
       <div id="depoimentos" class="container">
         <h2 class="font-xl-b animate-me animate-bottom">O que dizem meus clientes</h2>
         <div class="depoimentos-todos animate-me animate-left">
-
-          <div class="depoimento">
-            <div class="avatar">
-              <img src="./img/Helena-Augusta.jpg">
-              <div>
-                <h3 class="font-m-b">Helena Augusta</h3>
-                <span class="font-xs">HA Comunicação</span>
+          <!-- Botões de navegação se quiser flechas -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- Container principal do slider -->
+          <div class="swiper depoimentosSwiper">
+            <div class="swiper-wrapper">
+            
+              <div class="swiper-slide">
+                <div class="depoimento">
+                  <div class="avatar">
+                    <img src="./img/Helena-Augusta.jpg" alt="">
+                    <div>
+                      <h3 class="font-m-b">Helena Augusta</h3>
+                      <span class="font-xs">HA Comunicação</span>
+                    </div>
+                  </div>
+                  <p class="texto-depoimento font-s">
+                    O Thiago conseguiu atender todas as nossas necessidades. Ele captou a essência do que queríamos, apresentou sugestões e foi muito prestativo.
+                  </p>
+                </div>
               </div>
-            </div>
-            <p class="texto-depoimento font-s">O Thiago conseguiu atender todas as nossas necessidades. Ele captou a essência do que queríamos, apresentou sugestões e foi muito prestativo. 
-            </p>
-          </div>
-
-          <div class="depoimento">
-            <div class="avatar">
-              <img src="./img/renato-real.jpg">
-              <div>
-                <h3 class="font-m-b">Renato Real</h3>
-                <span class="font-xs">OMW Travel</span>
+              
+              <div class="swiper-slide">
+                <div class="depoimento">
+                  <div class="avatar">
+                    <img src="./img/renato-real.jpg" alt="">
+                    <div>
+                      <h3 class="font-m-b">Renato Real</h3>
+                      <span class="font-xs">OMW Travel</span>
+                    </div>
+                  </div>
+                  <p class="texto-depoimento font-s">
+                    Estou muito satisfeito com o trabalho do Thiago como desenvolvedor de site. Sua habilidade técnica brilhou ao apresentar opções criativas e funcionais para podermos decidir o melhor para o nosso negócio. Além disso, a pontualidade na entrega, agilidade na comunicação e seriedade demonstrada fazem dele um profissional excepcional. Recomendo seus serviços com confiança.                  </p>
+                </div>
               </div>
-            </div>
-            <p class="texto-depoimento font-s">Estou muito satisfeito com o trabalho do Thiago como desenvolvedor de site. Sua habilidade técnica brilhou ao apresentar opções criativas e funcionais para podermos decidir o melhor para o nosso negócio. Além disso, a pontualidade na entrega, agilidade na comunicação e seriedade demonstrada fazem dele um profissional excepcional. Recomendo seus serviços com confiança.
-            </p>
-          </div>
 
-          <div class="depoimento">
-            <div class="avatar">
-              <img src="./img/Maya-Borzani.jpg">
-              <div>
-                <h3 class="font-m-b">Maya Borzani</h3>
-                <span class="font-xs">MYA Swimwear</span>
+              <div class="swiper-slide">
+                <div class="depoimento">
+                  <div class="avatar">
+                    <img src="./img/Maya-Borzani.jpg" alt="">
+                    <div>
+                      <h3 class="font-m-b">Maya Borzani</h3>
+                      <span class="font-xs">MYA Swimwear</span>
+                    </div>
+                  </div>
+                  <p class="texto-depoimento font-s">
+                    Foi ótimo trabalhar com o Thiago. Além de trazer boas ideias, ele sempre foi muito atencioso e rápido em atender as nossas demandas. Super indicamos seu trabalho.
+                  </p>
+                </div>
               </div>
+
             </div>
-            <p class="texto-depoimento font-s">Foi ótimo trabalhar com o Thiago. Além de trazer boas ideias, ele sempre foi muito atencioso e rápido em atender as nossas demandas. Super indicamos seu trabalho.
-            </p>
+
+            <!-- Bullets da paginação -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
     </section>
     
-    <section class="quem container">
+    <section class="quem container" id="quem">
         <div class="texto-quem animate-me animate-left">
           <h2 class="font-xl-b">Quem sou</h2>
           <p class="font-s">
