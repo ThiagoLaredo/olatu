@@ -42,7 +42,6 @@
 .intro h1 {
   text-align: center;
   font-size: 3.2rem;
-  max-width: 50rem;
   position: relative;
   z-index: 4;
 }
