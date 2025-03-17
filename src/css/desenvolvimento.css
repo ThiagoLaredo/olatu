@@ -4,13 +4,37 @@
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 80px;
-  background-color: var(--bg-light); /* Fundo claro */
+  /* background-color: var(--bg-light); */
   color: var(--text);               /* Texto escuro */
+  position: relative;
 }
 
-.desenvolvimento-img img {
+.desenvolvimentoSwiper img {
   border-radius: 16px;
 }
+
+.desenvolvimentoSwiper {
+  border-radius: 20px; /* Ajuste conforme desejar */
+  overflow: hidden;
+}
+.swiper-slide .slide-desenvolvimento {
+  border-radius: 20px;
+}
+
+.circulo-azul {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 600px; /* Ajuste conforme necessário */
+  height: 600px; /* Ajuste conforme necessário */
+  background: linear-gradient(-180deg, #e6eeff 0%, rgba(230, 238, 255, 0) 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 
 /* Título principal da seção */
 #desenvolvimento h2 {
@@ -100,8 +124,23 @@
     gap: 40px;
   }
 
+  #desenvolvimento h2 {
+    text-align: center;
+  }
+
   .pilares {
     grid-template-columns: 1fr; /* Uma coluna */
+    gap: 40px;
+  }
+
+  .pilar-titulo {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pilares li p {
+   text-align: center;
   }
 
   .desenvolvimento-titulo {
@@ -113,5 +152,15 @@
 
   .desenvolvimento-titulo p {
     text-align: center;
+  }
+
+  .circulo-azul {
+    top: 80px; /* Remove o alinhamento vertical */
+    bottom: auto; /* Posiciona abaixo do conteúdo */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%); /* Centraliza no eixo X */
+    z-index: -1;
+    background: linear-gradient(180deg, #e6eeff 0%, rgba(230, 238, 255, 0) 100%);
   }
 }

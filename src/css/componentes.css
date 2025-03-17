@@ -28,7 +28,6 @@
   color: #fff;
   background-color: var(--primary);
   text-decoration: none;
-  display: block;
   border-radius: 3rem;
   border: 2px solid var(--primary);
   text-align: center;
@@ -46,7 +45,41 @@
 .btn-color:hover {
  background-color: var(--secondary);
  border: 2px solid var(--secondary);
+}
 
+.btn-ver-projeto {
+  padding: 10px 0px;
+  color: #fff;
+  text-decoration: none;
+  text-align: left;
+  display: flex;
+  align-items: center;  /* Alterado para "center" para alinhar verticalmente a seta */
+  justify-content: flex-start;
+  gap: 8px;
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+  margin: 0;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;      
+}
+
+.btn-ver-projeto::after {
+  content: '';
+  position: absolute;
+  right: -8px;  /* A seta estará à direita do texto */
+  top: 40%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid var(--primary); /* Seta apontando para a direita */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-ver-projeto:hover::after {
+
+  border-left-color: var(--secondary); /* Garante que a seta continue na cor primary */
 }
 
 .btn-anime {
@@ -113,4 +146,19 @@
 }
 
 
+/* Responsividade */
+@media (max-width: 800px) {
 
+  .btn-ver-projeto {
+    text-align: center;
+    display: flex;
+    align-items: center;  /* Alterado para "center" para alinhar verticalmente a seta */
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-ver-projeto::after {
+    right: 110px;  /* A seta estará à direita do texto */
+    left: auto
+  }
+}
