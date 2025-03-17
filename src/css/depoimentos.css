@@ -70,8 +70,38 @@
   line-height: 1.5;
 }
 
+.swiper-slide .depoimento {
+min-height: 330px;
+}
+ 
+
+.swiper-button-prev {
+  left: -60px;
+}
+
+.swiper-button-next {
+  right: -60px;
+}
+
+.btn-leia-mais {
+  color: var(--primary);
+  font: 400 0.75rem/1.35 "Inter", sans-serif;
+  background-color: #f5f7fa;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: block;
+  text-decoration: none;
+  border: none;
+  margin-top: 0.6rem;
+  cursor: pointer;      
+}
+
 /* Responsividade */
 @media (max-width: 800px) {
+
+  #depoimentos h2 {
+    text-align: center;
+  }
   .depoimentos-todos {
     flex-direction: column; /* Coluna no mobile */
     align-items: center;    /* Centraliza os cards */
@@ -80,5 +110,13 @@
 
   .depoimento {
     max-width: 100%;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+  
+  .swiper-button-next {
+    right: 0;
   }
 }

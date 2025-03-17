@@ -1,12 +1,14 @@
 
 
 .quem {
-  background-color: var(--bg-light);  /* volta ao branco */
+  /* background-color: var(--bg-light);   */
   color: var(--text);
   padding: 80px 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Duas colunas */
+  grid-template-columns: 1.8fr 1fr; /* Duas colunas */
   gap: 80px;
+  position: relative;
+
 }
 
 .texto-quem h2 {
@@ -22,6 +24,7 @@
 .texto-quem p {
   text-align: left;
   margin-bottom: 1rem;
+  z-index: 1;
 }
 
 .formacao-tecnica {
@@ -66,12 +69,27 @@
   color: var(--primary); /* Cor de destaque no hover */
 }
 
+
 #imagem-quem {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: left;
   border-radius: 1rem;
+  z-index: 2;
+}
+
+.circulo-azul-direita {
+  position: absolute;
+  top: 50%;
+  right: -140px; /* Colado na direita */
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(-180deg, #e6eeff 0%, rgba(230, 238, 255, 0) 100%);
+  border-radius: 50%;
+  transform: translateY(-50%); /* Apenas no eixo Y */
+  pointer-events: none;
+  z-index: -1;
 }
 
 #linkedin {
@@ -84,6 +102,14 @@
   opacity: 70%;
 }
 
+.swiper-button-next, .swiper-button-prev {
+  color: var(--primary);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 2rem;
+}
+
 /* Responsividade */
 @media (max-width: 800px) {
   #quem-bg {
@@ -93,11 +119,11 @@
 
   .quem {
     grid-template-columns: 1fr; /* Coluna única no mobile */
-    gap: 40px;
   }
 
   .texto-quem h2 {
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .texto-quem h3 {
@@ -108,5 +134,18 @@
   #imagem-quem {
     height: auto; /* Ajusta altura automaticamente */
     border-radius: 1rem;
+  }
+
+  .formacao-tecnica li:before {
+    bottom: 24px; /* Ajuste fino do alinhamento vertical */
+  }
+
+  .circulo-azul-direita {
+    top: auto; /* Remove o alinhamento vertical */
+    bottom: -20px; /* Posiciona abaixo do conteúdo */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%); /* Centraliza no eixo X */
+    background: linear-gradient(180deg, #e6eeff 0%, rgba(230, 238, 255, 0) 100%);
   }
 }

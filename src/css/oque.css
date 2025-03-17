@@ -36,6 +36,7 @@
   background: var(--bg-light); /* Fundo igual ao do site para ficar bem minimal */
   border: 1px solid #E5E7EB;   /* Linha sutil para demarcar o card */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra muito leve e discreta */
+  min-height: 862px;
 }
 
 /* Título dentro do card */

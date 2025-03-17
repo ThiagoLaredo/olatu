@@ -11,6 +11,10 @@ html,
 body {
   position: relative;
   height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  scroll-snap-type: none !important;
+
 }
 
 ul {

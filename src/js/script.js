@@ -1,5 +1,6 @@
 import ScrollSuave from './modules/scroll-suave.js';
 import MenuMobile from './modules/menu-mobile.js';
+import DepoimentosExpandir from './modules/depoimentosExpandir.js';
 import {
   MySwiperProjetos, 
   MySwiperDepoimentos, 
@@ -46,6 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Slider horizontal de desenvolvimento
   new MySwiperDesenvolvimento();
 
+  // Instanciar a classe para os depoimentos
+  new DepoimentosExpandir('.texto-depoimento', 220);
 
   // Animações de abertura de página e scroll
   initPageOpenAnimations();

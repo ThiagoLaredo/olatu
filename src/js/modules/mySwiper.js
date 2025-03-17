@@ -150,15 +150,32 @@ export class MySwiperDepoimentos {
     this.swiper = new Swiper('.depoimentosSwiper', {
       modules: [Navigation, Pagination],
       direction: 'horizontal',
-      slidesPerView: 3, // Mostra 3 slides ao mesmo tempo
-      spaceBetween: 20, // Espaçamento entre os slides (em pixels)
+      slidesPerView: 3, // Padrão: 3 slides para telas maiores
+      spaceBetween: 20,
       speed: 600,
-      // se quiser setas
+
+      breakpoints: {
+        0: { // Para telas pequenas (mobile)
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        768: { // Para tablets e telas médias
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1024: { // Para telas grandes
+          slidesPerView: 3,
+          spaceBetween: 20,
+        }
+      },
+
+      // Setas de navegação
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      // bullets
+
+      // Paginação (bullets)
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -167,9 +184,8 @@ export class MySwiperDepoimentos {
 
     console.log('Depoimentos Swiper initialized:', this.swiper);
   }
-
-  // Caso precise de métodos extras, adicione aqui
 }
+
 
 /**
  * Classe para Slider de Desenvolvimento (horizontal, só paginação)
