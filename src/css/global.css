@@ -3,19 +3,35 @@ body, h1, h2, h3, h4, p, ul, li, a {
   padding: 0;
 }
 
-body {
-  background-color: #fff;
+h1, h2, h3, h4, p, ul, li, a {
+  will-change: opacity, transform;
 }
 
 html,
 body {
-  position: relative;
+  /* position: relative; */
   height: 100%;
-  overflow-x: hidden;
-  width: 100%;
-  scroll-snap-type: none !important;
-
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
+
+button {
+  all: unset;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  outline: none;
+}
+
+.swiper-slide {
+  user-select: none;
+}
+
 
 ul {
   list-style: none;
@@ -38,7 +54,11 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%; /* Faz o container ocupar toda a largura disponível */
+  padding: 0 20px; /* Espaço interno do container */
+  box-sizing: border-box; /* Inclui padding na largura total */
 }
+
 
 .visually-hidden {
   position: absolute;
@@ -98,4 +118,6 @@ img {
   z-index: -1; /* Coloca o grifo atrás do texto */
   transition: width 0.5s ease-out; /* Animação suave */
 }
+
+
 
