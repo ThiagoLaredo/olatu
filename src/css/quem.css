@@ -8,6 +8,7 @@
   grid-template-columns: 1.8fr 1fr; /* Duas colunas */
   gap: 80px;
   position: relative;
+  overflow: hidden;
 
 }
 
