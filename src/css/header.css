@@ -90,7 +90,7 @@
 
 @media (max-width: 700px) {
   .header_menu {
-    padding: 2.4rem 20px;
+    padding: 2.4rem 0;
   }
 
   .menu a:hover::before {
